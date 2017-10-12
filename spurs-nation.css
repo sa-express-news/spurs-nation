@@ -142,7 +142,7 @@ a.without_u img,
 }
 a.without_u img,
 .single-img-wrapper img {
-    /* float: left; */
+    /*! float: left; */
     display: inline;
     margin-right: 5%;
     /* margin-bottom: 1em; */
@@ -487,6 +487,23 @@ footer ul li span {
     .zone-c > div {
         width: 90%;
         margin: 0 auto;
+    }
+    
+    .zone-b .without_u img{
+        float: left;
+        width: 50%;
+    }
+    
+    .zone-b .blurb{
+        margin-top: 1em;
+    }
+    
+    .zone-b .headline{
+        display:inline;
+/*         float: right; */
+    }
+    .zone-b .sec-hl-item{
+        overflow: auto;
     }
     .zone-c {
         flex-basis: 25%;
