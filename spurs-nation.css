@@ -287,6 +287,10 @@ div.sp-centerpiece {
     margin: 0;
 }
 
+.zone-b .sp-centerpiece .slide-bullets .active{
+    background-color: #333;
+}
+
 
 /* FOOTER */
 
