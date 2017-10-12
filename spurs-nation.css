@@ -363,12 +363,11 @@ footer .logo {
 }
 footer ul {
     clear: both;
+    display: flex;
+    flex-flow: row wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-footer ul li {
-    display: inline;
 }
 footer ul li:nth-of-type(even):after {
     content: "\A";
