@@ -339,6 +339,32 @@ footer ul li span {
         flex-basis: 45%;
     }
 }
+
+@media (max-width: 410px){
+
+    .en-share .logo{
+        display: flex;
+        flex-basis: 65%;
+    }
+
+    .en-share .share{
+        flex-basis: 30%;
+    }
+
+    .share img{
+        display: none;
+    }
+}
+
+@media (min-width: 410px) and (max-width: 500px) {
+    .en-share .logo {
+        display: flex;
+        flex-basis: 50%;
+    }
+    .en-share .share {
+        flex-basis: 45%;
+    }
+}
 @media (min-width: 550px) {
     .share button,
     .share img {
