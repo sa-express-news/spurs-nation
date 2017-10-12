@@ -39,6 +39,7 @@
 .share img {
     align-self: flex-end;
     flex-basis: 15%;
+    padding-left: .5em;
 }
 .title-logo {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
@@ -50,7 +51,7 @@
     flex-flow: row nowrap;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
     
-    height: 25vh;
+    height: 15vh;
     position: relative;
 }
 .title-logo h3,
@@ -78,9 +79,7 @@
     max-height: 5em;
     padding-right: 1vw;
 }
-.spurs-nation-header .title-logo {
-    height: 35vh;
-}
+
 /* MAIN SECTION/FRAMEWORK */
 /* The main site section */
 
@@ -89,6 +88,7 @@ section {
     flex-flow: column wrap;
     margin: 0 auto;
     width: 85%;
+    font-family: helvetica;
 }
 /* Each of the three subsections is split into a zone */
 
@@ -110,11 +110,13 @@ div.collection {
 }
 h2.headline,
 h3.headline {
-    color: #0a0a0a;
-    font-size: 1em;
-    letter-spacing: normal;
+    color: #222;
+    font-size: .95em;
+    letter-spacing: .07em;
     text-transform: none;
     line-height: normal;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 h2.headline a,
 h2.headline a:visited,
@@ -129,7 +131,10 @@ p.byline {
 }
 p.blurb {
     color: #2d2d2d;
-    line-height: 1.2;
+    line-height: 1.1;
+    margin-top: .5em;
+    border-bottom: 1px solid #404040;
+    padding-bottom: .5em;
 }
 .byline a {
     text-decoration: none;
@@ -169,7 +174,8 @@ a.without_u img,
 .kicker-link a {
     color: gray;
     text-decoration: none;
-}
+    text-transform: uppercase;
+}: 
 
 /* Stories in non-refer collections */
 .sec-hl-item{
@@ -273,7 +279,15 @@ a.without_u img,
 div.sp-centerpiece {
     margin: 0;
 }
-
+.sp-centerpiece .item span a{
+    font-family: helvetica;
+    font-size: .85em;
+    font-weight: bold;
+}
+.sp-centerpiece .slide-bullets [class^="slide-number"]{
+    height: 1.5vh;
+    width: 1.5vh;
+}
 
 /* FOOTER */
 
@@ -329,9 +343,13 @@ footer ul li span {
     .spurs-stats {
         display: none;
     }
+    .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
+        opacity: 0;
+    }
 }
 @media (min-width: 500px) {
-    .en-share .logo {
+    .en-
+    .logo {
         display: flex;
         flex-basis: 50%;
     }
@@ -505,6 +523,7 @@ footer ul li span {
     
     .zone-b .blurb{
         margin-top: 1em;
+        
     }
     
     .zone-b .headline{
