@@ -468,6 +468,11 @@ footer ul li span {
     .author {
         flex-basis: 15%;
     }
+    .author-container figcaption {
+    display: block;
+        text-align: center;
+        font-size: 80%
+}
 }
 @media(min-width: 1280px) {
     .en-share .logo {
