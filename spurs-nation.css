@@ -33,9 +33,11 @@
     font-weight: bold;
     flex-basis: 20%;
     margin-top: auto;
-    padding: .25em;
+    padding: .15em;
     border-style: solid;
     font-family: verdana;
+    font-size: .75em;
+    margin-left: 1.75em;
 }
 .share img {
     align-self: flex-end;
@@ -50,8 +52,8 @@
     color: white;
     display: flex;
     flex-flow: row nowrap;
-    font-family: rockweel extra bold, rockwell bold, monospace;
-    font-size: 1.25em;
+    font-family: verdana;
+    font-size: 1em;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
     
     height: 15vh;
@@ -261,6 +263,11 @@ a.without_u img,
     color: #f2f2f2;
     font-family: helvetica;
 }
+
+.spurs-schedule table .shsTableTtlRow td:before {
+    content: "SPURS "
+}
+
 .spurs-schedule table tr:not(.shsTableTtlRow) {
     background: #f8f8f8;
     font-family: helvetica;
