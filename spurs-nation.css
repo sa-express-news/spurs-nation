@@ -3,12 +3,21 @@
 .spurs-nation-header {
     margin-bottom: 2em;
 }
+
+.fixed-share-container{
+    height: 100%;
+}
+
 .en-share {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding-bottom: .25em;
     padding-top: .25em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: white;
 }
 .en-share .logo {
     flex-basis: 30%;
@@ -49,8 +58,8 @@
     display: flex;
     flex-flow: row nowrap;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
-    
     height: 25vh;
+    margin-top: 40px;
     position: relative;
 }
 .title-logo h3,
