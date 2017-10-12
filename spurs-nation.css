@@ -326,7 +326,7 @@ footer ul li span {
 
 
 @media (max-width: 499px) {
-    .spurs-stats {
+    .zone-a > div:nth-child(2) {
         display: none;
     }
 }
