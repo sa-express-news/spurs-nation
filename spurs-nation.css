@@ -134,8 +134,8 @@ div.collection {
 h2.headline,
 h3.headline {
     color: #222;
-    font-size: .95em;
-    letter-spacing: .07em;
+    font-size: 1.1em;
+    letter-spacing: 0.03em;
     text-transform: none;
     line-height: normal;
     margin-top: .5em;
@@ -418,7 +418,7 @@ footer ul li span {
     a.without_u img {
         margin-left: 1 em;
         margin-right: 1 em;
-        width: 45%
+        width: 100%;
     }
     .sn-zone > div:not(:last-of-type){
         border-bottom: none;
