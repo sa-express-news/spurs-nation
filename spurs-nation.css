@@ -267,6 +267,10 @@ a.without_u img,
     display: none;
 }
 
+.spurs-stats .shsTable tr:nth-of-type(n+8){
+    display:none;
+}
+
 
 /* Slideshow */
 
