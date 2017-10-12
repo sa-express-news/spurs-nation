@@ -20,7 +20,7 @@
     background: white;
 }
 .en-share .logo {
-    flex-basis: 30%;
+    flex-basis: 40%;
 }
 .logo img {
     width: 100%;
@@ -42,12 +42,16 @@
     font-weight: bold;
     flex-basis: 20%;
     margin-top: auto;
-    padding: .25em;
+    padding: .15em;
     border-style: solid;
+    font-family: verdana;
+    font-size: .75em;
+    margin-left: 1.75em;
 }
 .share img {
     align-self: flex-end;
     flex-basis: 15%;
+    padding-left: .5em;
 }
 .title-logo {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
@@ -57,6 +61,8 @@
     color: white;
     display: flex;
     flex-flow: row nowrap;
+    font-family: verdana;
+    font-size: 1em;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
     height: 25vh;
     margin-top: 40px;
@@ -66,13 +72,15 @@
 .title-logo p {
     margin: 0;
     padding-left: 1.5vw;
+    text-shadow: .06em .06em #000;
 }
 .title-logo h3 {
-    font-family: 
+    font-family: inherit;
     font-size: 1.5em;
     font-weight: bold;
     padding-top: 5vh;
     padding-bottom: .8vh;
+    /*! font-family: verdana; */
 }
 .title-logo .title {
     flex-basis: 80%;
@@ -87,9 +95,7 @@
     max-height: 5em;
     padding-right: 1vw;
 }
-.spurs-nation-header .title-logo {
-    height: 35vh;
-}
+
 /* MAIN SECTION/FRAMEWORK */
 /* The main site section */
 
@@ -98,6 +104,7 @@ section {
     flex-flow: column wrap;
     margin: 0 auto;
     width: 85%;
+    font-family: helvetica;
 }
 /* Each of the three subsections is split into a zone */
 
@@ -105,7 +112,7 @@ section {
     width: 100%;
 }
 .sn-zone > div {
-    padding-bottom: 3vh;
+    padding-bottom: 2vh;
     margin: 1vh 0;
     clear: both;
 }
@@ -117,13 +124,23 @@ section {
 div.collection {
     /* overflow: auto; */
 }
+
+.sec-hl-item{
+    border-top: 1px solid gray;
+/*     padding-top: 1.5em;
+    padding-bottom: 1.5em; */
+}
+
 h2.headline,
 h3.headline {
-    color: #0a0a0a;
-    font-size: 1em;
-    letter-spacing: normal;
+    color: #222;
+    font-size: .95em;
+    letter-spacing: .07em;
     text-transform: none;
     line-height: normal;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-family: helvetica;
 }
 h2.headline a,
 h2.headline a:visited,
@@ -131,6 +148,7 @@ h3.headline a,
 h3.headline a:visited {
     color: inherit;
     text-decoration: none;
+    font-family: helvetica;
 }
 p.byline {
     color: #0a0a0a;
@@ -138,7 +156,9 @@ p.byline {
 }
 p.blurb {
     color: #2d2d2d;
-    line-height: 1.2;
+    line-height: 1.3;
+    margin-top: .65em;
+    margin-bottom: .65em;
 }
 .byline a {
     text-decoration: none;
@@ -159,6 +179,8 @@ a.without_u img,
     display: inline;
     margin-right: 5%;
     /* margin-bottom: 1em; */
+    /*! max-height: 26vh; */
+    /*! width: auto; */
 }
 .illo {
     /* overflow: auto; */
@@ -176,8 +198,9 @@ a.without_u img,
     display: none;
 }
 .kicker-link a {
-    color: gray;
+    color: #636062;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* Stories in non-refer collections */
@@ -210,11 +233,15 @@ a.without_u img,
     font-weight: bold;
 }
 .author {
-    flex-basis: 25%;
+    flex-basis: 34%;
     margin: 1em 0;
+    /*! border-bottom: 1px solid black; */
 }
 .author-container figcaption {
     display: none;
+}
+.hst-freeform hdnce-e hdnce-item-84206{
+    color: #5E5E5E;
 }
 .author img {
     border-radius: 50%;
@@ -223,6 +250,10 @@ a.without_u img,
 }
 /* SCHEDULE BOX */
 
+.shsTable a{
+    text-decoration: none;
+    color: black;
+}
 .spurs-schedule table {
     border: 1px solid gray;
     text-align: center;
@@ -232,20 +263,29 @@ a.without_u img,
     padding: .5em;
 }
 .spurs-schedule table .shsTableTtlRow {
-    background: #c0c0c0;
+    background: #222;
 }
 .spurs-schedule table .shsTableTtlRow td {
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
+    color: #f2f2f2;
+    font-family: helvetica;
 }
+
+.spurs-schedule table .shsTableTtlRow td:before {
+    content: "SPURS "
+}
+
 .spurs-schedule table tr:not(.shsTableTtlRow) {
     background: #f8f8f8;
+    font-family: helvetica;
 }
 .spurs-schedule table .shsTimezone:not(.shsCTZone) {
     display: none;
 }
 .spurs-schedule > div {
-    width: 75%;
+    width: 96%;
     margin: 0 auto;
 }
 .spurs-schedule table {
@@ -263,7 +303,7 @@ a.without_u img,
     padding: .5em;
 }
 .spurs-stats .shsTableTtlRow {
-    background: #c0c0c0;
+    background: #f8f8f8;
 }
 .spurs-stats .shsTableTtlRow td {
     font-weight: bold;
@@ -291,6 +331,16 @@ div.sp-centerpiece {
     background-color: #333;
 }
 
+.sp-centerpiece .item span a{
+    font-family: helvetica;
+    font-size: .85em;
+    font-weight: bold;
+    text-shadow: 0.08em .08em .08em #000;
+}
+.sp-centerpiece .slide-bullets [class^="slide-number"]{
+    height: 1.5vh;
+    width: 1.5vh;
+}
 
 /* FOOTER */
 
@@ -346,9 +396,57 @@ footer ul li span {
     .zone-a > div:nth-child(2) {
         display: none;
     }
+    .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
+        opacity: 0;
+    }
+    section{
+        margin-left: 2.5 em;
+        margin-right: 2 em;
+    }
+    p.blurb {
+        border-bottom: 1px solid #5E5E5E;
+        padding-bottom: .85em;
+        margin-left: 1 em;
+        margin-right: 1 em;
+}
+    h2.headline {
+        padding-top: .85em;
+        padding-bottom: .45em;
+        margin-left: 1 em;
+        margin-right: 1 em;
+    }
+    a.without_u img {
+        margin-left: 1 em;
+        margin-right: 1 em;
+        width: 45%
+    }
+    .sn-zone > div:not(:last-of-type){
+        border-bottom: none;
+        padding-bottom: 1.5vh;
+    }
+    .author{
+        flex-basis: 45%;
+    }
+    .item.first.single h3{
+        padding-top: .45em;
+        padding-bottom: .85em;
+    }
+    .detail {
+        padding-top: .85em;
+        padding-bottom: .25em;
+        line-height: 1.3em;
+        color: #2d2d2d;
+    }
+    p.byline {
+        padding-bottom: .25em;
+    }
+    .sec-hl-item {
+        border-top: none;
+    }
 }
 @media (min-width: 500px) {
-    .en-share .logo {
+    .en-
+    .logo {
         display: flex;
         flex-basis: 50%;
     }
@@ -457,7 +555,7 @@ footer ul li span {
         order: 3;
     }
 }
-@media(min-width: 1024px) and (max-width: 1279px) {
+@media(min-width: 900px) and (max-width: 1279px) {
     section {
         display: flex;
         flex-flow: row wrap;
@@ -465,15 +563,16 @@ footer ul li span {
         width: 100%;
     }
     .zone-a {
-        display: flex;
-        flex-basis: 100%;
+/*         display: flex; */
+        flex-basis: 30%;
         flex-flow: row nowrap;
         justify-content: space-around;
         order: 3;
+        margin-left: auto;
     }
     
     .zone-a .item img{
-        width: 60%;
+/*         width: 60%; */
     }
     .zone-a > div:nth-of-type(1) {
         order: 3;
@@ -486,16 +585,20 @@ footer ul li span {
         display: none;
     }
     .zone-a > div:nth-of-type(3) {
-        order: 1;
-        flex-basis: 40%;
+        /*! order: 1; */
+        /*! flex-basis: 40%; */
     }
     .zone-a > div:nth-of-type(4) {
-        order: 2;
-        flex-basis: 40%;
+        /*! order: 2; */
+        /*! flex-basis: 40%; */
     }
     .zone-b {
         flex-basis: 60%;
         order: 1;
+    }
+    
+    .zone-b .without_u img{
+        width: 60%;
     }
     .zone-c {
         flex-basis: 30%;
@@ -530,6 +633,7 @@ footer ul li span {
     }
     .zone-a {
         flex-basis: 25%;
+        border-right: 1px solid gray;
     }
     .zone-b {
         flex-basis: 45%;
@@ -559,6 +663,7 @@ footer ul li span {
     }
     .zone-c {
         flex-basis: 25%;
+        border-left: 1px solid gray;
     }
     .author {
         flex-basis: 18%
