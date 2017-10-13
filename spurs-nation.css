@@ -125,10 +125,22 @@ div.collection {
     /* overflow: auto; */
 }
 
+
+/* This is the container for non-refer collections */
 .sec-hl-item{
     border-top: 1px solid gray;
 /*     padding-top: 1.5em;
     padding-bottom: 1.5em; */
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* Set the headline below the photo, but above the blurb */
+.sec-hl-item .headline{
+    order: 1;
+}
+.sec-hl-item .blurb{
+    order: 2;
 }
 
 h2.headline,
@@ -206,6 +218,8 @@ a.without_u img,
 /* Stories in non-refer collections */
 .sec-hl-item{
     margin: 1em 0;
+    display: flex;
+    flex-flow: column wrap;
 }
 /* Refers */
 
