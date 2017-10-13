@@ -340,7 +340,7 @@ p.blurb {
     color: #fff;
 }
 .spurs-stats tr:not(.shsTableTtlRow) {
-    background: ;
+    /* background: ; */
 }
 .spurs-stats .shsTimezone:not(.shsCTZone) {
     display: none;
@@ -644,13 +644,9 @@ footer ul li span {
         flex-flow: row nowrap;
         justify-content: space-around;
         order: 3;
-<<<<<<< HEAD
-        margin-left: 1.5em;
-=======
         margin-right: auto;
 /*! justify-self: flex-end; */
 margin-left: 2.25%;
->>>>>>> kia
     }
     
     .zone-a .item img{
