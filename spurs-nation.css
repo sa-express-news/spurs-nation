@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 /* HEADER/BANNER */
 
 .spurs-nation-header {
@@ -13,11 +17,16 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     padding-bottom: .25em;
-    padding-top: .25em;
+    padding-top: 0.25em;
     position: fixed;
     width: 100%;
     z-index: 10;
     background: #111;
+    /*! align-content: center; */
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    /*! height: 80%; */
 }
 .en-share .logo {
     flex-basis: 40%;
@@ -66,7 +75,7 @@
     font-size: 1em;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
     height: 25vh;
-    margin-top: 40px;
+    margin-top: 37px;
     position: relative;
 }
 .title-logo h3,
@@ -544,6 +553,10 @@ footer ul li span {
     .share img {
         height: 35px;
     }
+    
+    .title-logo{
+        padding-top: 40px;
+    }
 }
 @media (min-width: 600px) {
     .title-logo h3 {
@@ -627,11 +640,17 @@ footer ul li span {
     }
     .zone-a {
 /*         display: flex; */
-        flex-basis: 30%;
+        flex-basis: 60%;
         flex-flow: row nowrap;
         justify-content: space-around;
         order: 3;
+<<<<<<< HEAD
         margin-left: 1.5em;
+=======
+        margin-right: auto;
+/*! justify-self: flex-end; */
+margin-left: 2.25%;
+>>>>>>> kia
     }
     
     .zone-a .item img{
@@ -720,10 +739,17 @@ footer ul li span {
         font-size: 80%;
     padding-top: .5em;
 }
+    .title-logo{
+        padding-top: 30px;
+    }
 }
 @media(min-width: 1280px) {
     .en-share .logo {
         flex-basis: 30%;
+    }
+    
+    .title-logo{
+        padding-top: 45px;
     }
     section {
         flex-flow: row nowrap;
