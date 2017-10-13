@@ -17,7 +17,7 @@
     position: fixed;
     width: 100%;
     z-index: 10;
-    background: white;
+    background: #111;
 }
 .en-share .logo {
     flex-basis: 40%;
@@ -37,7 +37,6 @@
 .share button {
     background: #ba141a;
     border-color: #84141A;
-    border-radius: 15px;
     color: white;
     font-weight: bold;
     flex-basis: 20%;
@@ -45,8 +44,9 @@
     padding: .15em;
     border-style: solid;
     font-family: verdana;
-    font-size: .75em;
+    font-size: 1em;
     margin-left: 1.75em;
+    border-radius: 15px;
 }
 .share img {
     align-self: flex-end;
@@ -113,11 +113,9 @@ section {
 }
 .sn-zone > div {
     padding-bottom: 2vh;
-    margin: 1vh 0;
     clear: both;
 }
 .sn-zone > div:not(:last-of-type) {
-    border-bottom: 1px solid gray;
 }
 /* STORY STYLING */
 
@@ -125,10 +123,8 @@ div.collection {
     /* overflow: auto; */
 }
 
-
 /* This is the container for non-refer collections */
 .sec-hl-item{
-    border-top: 1px solid gray;
 /*     padding-top: 1.5em;
     padding-bottom: 1.5em; */
     display: flex;
@@ -151,7 +147,6 @@ h3.headline {
     text-transform: none;
     line-height: normal;
     margin-top: .5em;
-    margin-bottom: .5em;
     font-family: helvetica;
 }
 h2.headline a,
@@ -161,6 +156,7 @@ h3.headline a:visited {
     color: inherit;
     text-decoration: none;
     font-family: helvetica;
+    font-size: 1em;
 }
 p.byline {
     color: #0a0a0a;
@@ -169,8 +165,8 @@ p.byline {
 p.blurb {
     color: #2d2d2d;
     line-height: 1.3;
-    margin-top: .65em;
-    margin-bottom: .65em;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 .byline a {
     text-decoration: none;
@@ -181,19 +177,21 @@ p.blurb {
 }
 /* story photos */
 
-a.without_u img,
+.without_u img,
 .single-img-wrapper img {
-    width: 50%;
+    width: 43%;
     float: right;
     padding-left: .5em;
 }
-a.without_u img,
+.without_u img,
 .single-img-wrapper img {
-    display: inline;
+    /*! display: inline; */
     margin-right: 0%;
 }
 .illo {
-    /* overflow: auto; */
+    overflow: auto;
+    border-bottom: 1.5px solid #B8B8B8;
+    padding-bottom: 1.8em;
 }
 .item.first.single {
     /* Make refer collection photos fit within the div so the border looks right */
@@ -207,10 +205,12 @@ a.without_u img,
 .headline.display-below {
     display: none;
 }
-.kicker-link a {
+.kicker-link, .kicker-link a, .author-block h3 {
     color: #636062;
     text-decoration: none;
     text-transform: uppercase;
+    margin-bottom: .85em;
+    margin-top: 1.5em;
 }
 
 /* Stories in non-refer collections */
@@ -222,7 +222,7 @@ a.without_u img,
 /* Refers */
 
 .item.rel-links {
-    font-size: 80%;
+    font-size: 85%;
 }
 .item.rel-links a {
     color: inherit;
@@ -412,7 +412,7 @@ footer ul li span {
     }
 
     p.blurb {
-        border-bottom: 1px solid #5E5E5E;
+        border-bottom: 1.5px solid #B8B8B8;
         padding-bottom: .85em;
         margin-left: 1 em;
         margin-right: 1 em;
@@ -431,7 +431,14 @@ footer ul li span {
         padding-bottom: 1.5vh;
     }
     .author{
-        flex-basis: 45%;
+        flex-basis: 34%;
+    }
+    .author-block{
+        border-bottom: 1.5px solid #B8B8B8;
+    }
+    .shsMinischedrslt{
+        padding-bottom: .5em;
+        border-bottom: 1.5px solid #B8B8B8;
     }
     .item.first.single h3{
         padding-top: .45em;
@@ -458,6 +465,38 @@ footer ul li span {
     }
     .en-share .share {
         flex-basis: 45%;
+    }
+    .zone-b .without_u img {
+        width: 100%;
+    }
+    .zone-b .headline {
+        font-size: 1.25em;
+    }
+    .zone-b .blurb {
+        font-size: 1.05em;
+        border-bottom: 1.5px solid #B8B8B8;
+        padding-bottom:.85em;
+    }
+    .author-block {
+        border-bottom: 1.5px solid #b8b8b8;
+    }
+    .zone-c img{
+        padding-left: .75em;
+        padding-top: .75em;
+    }
+    .zone-c .detail {
+        margin-top: 1.5em;
+        line-height: 1.4em;
+        padding-bottom: .75em;
+    }
+    .zone-a .detail {
+        line-height: 1.3em;
+        padding-bottom: .75em;
+        padding-top: 1em;
+    }
+    .zone-a img {
+        padding-top: .75em;
+        padding-left: .75em;
     }
 }
 
@@ -561,6 +600,10 @@ footer ul li span {
         order: 3;
     }
 }
+
+
+/* TWO-COLUMN LAYOUT, INTENDED FOR TABLETS + SMALL DESKTOPS */
+
 @media(min-width: 900px) and (max-width: 1279px) {
     section {
         display: flex;
@@ -604,12 +647,40 @@ footer ul li span {
     }
     
     .zone-b .without_u img{
-        width: 60%;
+        width: 33%;
     }
     .zone-c {
         flex-basis: 30%;
         order: 2;
     }
+    
+/*     Float images to the right in zone b, with headline and blurb floated left beside them */
+    
+    .zone-b .sec-hl-item{
+        display: block;
+        overflow: auto;
+        border-bottom: 1.5px solid #B8B8B8;
+        padding-bottom: 2em;
+        padding-top: 1em;
+    }
+    
+    .zone-b .headline, .zone-b .blurb, .zone-b .header{
+        width: 63%;
+    }
+    
+    .zone-b .headline{
+        display: inline;
+        float: left;
+    }
+    
+    .zone-b .blurb{
+        border: none;
+    }
+    
+/*     .zone-b .without_u, .zone-b .without_u img{
+        display: block;
+    } */
+
 }
 @media(min-width: 1024px) {
     .spurs-nation-header .en-share .logo {
@@ -651,22 +722,45 @@ footer ul li span {
         margin: 0 auto;
     }
     
-    .zone-b .without_u img{
-        float: left;
-        width: 50%;
-    }
-    
     .zone-b .blurb{
         margin-top: 1em;
     }
     
-    .zone-b .headline{
+    
+/*     Float images in zone b left, with headline and blurbs floated right */
+    
+    .zone-b .sec-hl-item{
+        display: block;
+        overflow: auto;
+    }
+    
+    .zone-b .headline, .zone-b .blurb, .zone-b .header{
+        width: 50%;
+    }
+    
+    .zone-b .headline, .zone-b .blurb{
+        display: inline;
+        float: right;
+    }
+    
+    .zone-b .blurb{
+        border: none;
+    }
+    
+    .zone-b .without_u img {
         display:inline;
-/*         float: right; */
+        float:left;
+        padding-left: 0;
+        width: 45%;
     }
     .zone-b .sec-hl-item{
         overflow: auto;
     }
+    
+    
+    
+    
+    
     .zone-c {
         flex-basis: 25%;
         border-left: 1px solid gray;
