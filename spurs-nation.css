@@ -36,7 +36,7 @@
 }
 .share button {
     background: #ba141a;
-    border-color: #84141A;
+    border-color: #ba141a;
     color: white;
     font-weight: bold;
     flex-basis: 20%;
@@ -47,6 +47,7 @@
     font-size: 1em;
     margin-left: 1.75em;
     border-radius: 15px;
+    /*! margin-bottom: .5em; */
 }
 .share img {
     align-self: flex-end;
@@ -103,7 +104,7 @@ section {
     display: flex;
     flex-flow: column wrap;
     margin: 0 auto;
-    width: 85%;
+    width: 80%;
     font-family: helvetica;
 }
 /* Each of the three subsections is split into a zone */
@@ -112,7 +113,6 @@ section {
     width: 100%;
 }
 .sn-zone > div {
-    padding-bottom: 2vh;
     clear: both;
 }
 .sn-zone > div:not(:last-of-type) {
@@ -161,12 +161,12 @@ h3.headline a:visited {
 p.byline {
     color: #0a0a0a;
     font-weight: bold;
+    padding-bottom: .5em;
 }
 p.blurb {
     color: #2d2d2d;
     line-height: 1.3;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-bottom: .85em;
 }
 .byline a {
     text-decoration: none;
@@ -179,7 +179,7 @@ p.blurb {
 
 .without_u img,
 .single-img-wrapper img {
-    width: 43%;
+    width: 39%;
     float: right;
     padding-left: .5em;
 }
@@ -191,7 +191,8 @@ p.blurb {
 .illo {
     overflow: auto;
     border-bottom: 1.5px solid #B8B8B8;
-    padding-bottom: 1.8em;
+    padding-bottom: 1em;
+    /*! margin-bottom: 1em; */
 }
 .item.first.single {
     /* Make refer collection photos fit within the div so the border looks right */
@@ -206,16 +207,16 @@ p.blurb {
     display: none;
 }
 .kicker-link, .kicker-link a, .author-block h3 {
-    color: #636062;
+    color: #949494;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: .85em;
-    margin-top: 1.5em;
+    margin-top: 1em;
 }
 
 /* Stories in non-refer collections */
 .sec-hl-item{
-    margin: 1em 0;
+    /*! margin: 1em 0; */
     display: flex;
     flex-flow: column wrap;
 }
@@ -243,6 +244,7 @@ p.blurb {
     width: 100%;
     color: #0a0a0a;
     font-weight: bold;
+    margin-bottom: 1em;
 }
 .author {
     flex-basis: 34%;
@@ -263,25 +265,30 @@ p.blurb {
 /* SCHEDULE BOX */
 
 .shsTable a{
-    text-decoration: none;
-    color: black;
+    text-decoration: underline;
+    color: inherit;
 }
 .spurs-schedule table {
-    border: 1px solid gray;
+    border: 1px solid black;
     text-align: center;
 }
 .spurs-schedule table td {
     border: 1px solid gray;
     padding: .5em;
+    background-color:#fff;
+    color: #000;
 }
-.spurs-schedule table .shsTableTtlRow {
-    background: #222;
+
+
+.spurs-schedule table .shsTableTtlRow > td{
+    background: #000;
+    color: #fff;
 }
 .spurs-schedule table .shsTableTtlRow td {
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    color: #f2f2f2;
+    /*! color: #fff; */
     font-family: helvetica;
 }
 
@@ -306,23 +313,25 @@ p.blurb {
 /* STATS BOX */
 
 .spurs-stats table {
-    border: 1px solid gray;
+    border: 1.5px solid #fff;
     text-align: center;
     width: 100%;
 }
 .spurs-stats td {
     border: 1px solid gray;
     padding: .5em;
+    color: #000;
 }
 .spurs-stats .shsTableTtlRow {
-    background: #f8f8f8;
+    background: #222;
 }
 .spurs-stats .shsTableTtlRow td {
     font-weight: bold;
     text-transform: uppercase;
+    color: #fff;
 }
 .spurs-stats tr:not(.shsTableTtlRow) {
-    background: #f8f8f8;
+    background: ;
 }
 .spurs-stats .shsTimezone:not(.shsCTZone) {
     display: none;
@@ -337,6 +346,7 @@ p.blurb {
 
 div.sp-centerpiece {
     margin: 0;
+    margin-top: 1.5em;
 }
 
 .zone-b .sp-centerpiece .slide-bullets .active{
@@ -456,6 +466,10 @@ footer ul li span {
     .sec-hl-item {
         border-top: none;
     }
+   
+    .zone-c >div:last-of-type .illo{
+        margin-bottom: 1em;
+    }
 }
 @media (min-width: 500px) {
     .en-
@@ -482,11 +496,11 @@ footer ul li span {
     }
     .zone-c img{
         padding-left: .75em;
-        padding-top: .75em;
+        padding-top: .5em;
     }
     .zone-c .detail {
         margin-top: 1.5em;
-        line-height: 1.4em;
+        line-height: 1.3em;
         padding-bottom: .75em;
     }
     .zone-a .detail {
@@ -617,7 +631,7 @@ footer ul li span {
         flex-flow: row nowrap;
         justify-content: space-around;
         order: 3;
-        margin-left: auto;
+        margin-left: 1.5em;
     }
     
     .zone-a .item img{
@@ -644,6 +658,8 @@ footer ul li span {
     .zone-b {
         flex-basis: 60%;
         order: 1;
+        margin-left: 1.5em;
+        margin-right: 2em;
     }
     
     .zone-b .without_u img{
@@ -652,6 +668,7 @@ footer ul li span {
     .zone-c {
         flex-basis: 30%;
         order: 2;
+        margin-right: 1.5em;
     }
     
 /*     Float images to the right in zone b, with headline and blurb floated left beside them */
@@ -660,7 +677,7 @@ footer ul li span {
         display: block;
         overflow: auto;
         border-bottom: 1.5px solid #B8B8B8;
-        padding-bottom: 2em;
+        padding-bottom: 1em;
         padding-top: 1em;
     }
     
@@ -671,6 +688,7 @@ footer ul li span {
     .zone-b .headline{
         display: inline;
         float: left;
+        padding-bottom: .85em;
     }
     
     .zone-b .blurb{
@@ -694,11 +712,13 @@ footer ul li span {
     }
     .author {
         flex-basis: 15%;
+        margin-bottom: .5em;
     }
     .author-container figcaption {
     display: block;
         text-align: center;
-        font-size: 80%
+        font-size: 80%;
+    padding-top: .5em;
 }
 }
 @media(min-width: 1280px) {
@@ -710,7 +730,7 @@ footer ul li span {
     }
     .zone-a {
         flex-basis: 25%;
-        border-right: 1px solid gray;
+        border-right: 1px solid #b8b8b8;
     }
     .zone-b {
         flex-basis: 45%;
@@ -747,6 +767,11 @@ footer ul li span {
         border: none;
     }
     
+    .zone-b .headline{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    
     .zone-b .without_u img {
         display:inline;
         float:left;
@@ -755,6 +780,9 @@ footer ul li span {
     }
     .zone-b .sec-hl-item{
         overflow: auto;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #b8b8b8;
+        margin-bottom: 1em;
     }
     
     
@@ -763,7 +791,7 @@ footer ul li span {
     
     .zone-c {
         flex-basis: 25%;
-        border-left: 1px solid gray;
+        border-left: 1px solid #b8b8b8;
     }
     .author {
         flex-basis: 18%
