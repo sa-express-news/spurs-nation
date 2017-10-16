@@ -39,6 +39,7 @@ body{
     display: flex;
     flex-flow: row nowrap;
     flex-basis: 60%;
+    align-items: center;
 }
 .share button,
 .share img {
@@ -50,7 +51,7 @@ body{
     color: white;
     font-weight: bold;
     flex-basis: 20%;
-    margin-top: auto;
+    /*! margin-top: auto; */
     padding: .15em;
     border-style: solid;
     font-family: verdana;
@@ -58,12 +59,39 @@ body{
     margin-left: 1.75em;
     border-radius: 15px;
     /*! margin-bottom: .5em; */
+    /*! align-self: center; */
 }
 .share img {
     align-self: flex-end;
     flex-basis: 15%;
     padding-left: .5em;
 }
+
+.share a{
+    background: url('http://ww1.hdnux.com/photos/53/52/26/11445656/8/rawImage.png') 0 0 no-repeat;
+    background-position-x: 0px;
+    background-position-y: 0px;
+    background-size: auto auto;
+    background-size: 264px 88px;
+    display: block;
+    float: left;
+    height: 44px;
+    margin: 0;
+    width: 44px;
+}
+
+.share a.facebook{
+    background-position: -88px 0;
+}
+
+.share a.twitter{
+    background-position: -132px 0;
+}
+
+.share a.mail{
+    background-position: -176px 0;
+}
+
 .title-logo {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
     background-position: center center;
@@ -567,7 +595,7 @@ footer ul li span {
         flex-basis: 30%;
     }
 
-    .share img{
+    .share img, .share a{
         display: none;
     }
 }
