@@ -1,7 +1,6 @@
 body{
     overflow-x: hidden;
 }
-
 /* HEADER/BANNER */
 
 .spurs-nation-header {
@@ -16,8 +15,8 @@ body{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding-bottom: .25em;
-    padding-top: 0.25em;
+    /*! padding-bottom: .25em; */
+    /*! padding-top: 0.25em; */
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -26,13 +25,14 @@ body{
     align-items: center;
     padding-left: 1%;
     padding-right: 1%;
-    /*! height: 80%; */
+    height: 7%;
 }
 .en-share .logo {
     flex-basis: 40%;
 }
 .logo img {
-    width: 100%;
+    width: 78%;
+    padding-left: .5em;
 }
 .en-share .share {
     display: flex;
@@ -41,7 +41,7 @@ body{
 }
 .share button,
 .share img {
-    height: 30px;
+    height: 23px;
 }
 .share button {
     background: #ba141a;
@@ -53,15 +53,14 @@ body{
     padding: .15em;
     border-style: solid;
     font-family: verdana;
-    font-size: 1em;
+    font-size: .85em;
     margin-left: 1.75em;
     border-radius: 15px;
-    /*! margin-bottom: .5em; */
 }
 .share img {
     align-self: flex-end;
     flex-basis: 15%;
-    padding-left: .5em;
+    /*! padding-left: .5em; */
 }
 .title-logo {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
@@ -158,11 +157,17 @@ h3.headline {
     margin-top: .5em;
     font-family: helvetica;
 }
-h2.headline a,
 h2.headline a:visited,
-h3.headline a,
 h3.headline a:visited {
     color: inherit;
+    text-decoration: none;
+    font-family: helvetica;
+    font-size: 1em;
+}
+h2.headline a,
+h3.headline a {
+    text-decoration: underline;
+     color: inherit;
     text-decoration: none;
     font-family: helvetica;
     font-size: 1em;
@@ -188,10 +193,10 @@ p.blurb {
 
 .without_u img,
 .single-img-wrapper img {
-    /*! width: 39%; */
+    width: 39%;
     float: right;
     padding-left: .5em;
-    width: 100%;
+/*     width: 100%; */
 }
 .without_u img,
 .single-img-wrapper img {
@@ -200,9 +205,8 @@ p.blurb {
 }
 .illo {
     overflow: auto;
-    border-bottom: 1.5px solid #B8B8B8;
+    border-bottom: 1.5px solid #C2C2C2;
     padding-bottom: 1em;
-    /*! margin-bottom: 1em; */
 }
 
 
@@ -273,14 +277,19 @@ p.blurb {
     font-weight: bold;
     margin-bottom: 1em;
 }
+.author-container figcaption {
+    display: block;
+    text-align: center;
+    font-size: 80%;
+    padding-top: .5em;
+/*     Styles all author names the same */
+}
 .author {
     flex-basis: 34%;
     margin: 1em 0;
     /*! border-bottom: 1px solid black; */
 }
-.author-container figcaption {
-    display: none;
-}
+
 .hst-freeform hdnce-e hdnce-item-84206{
     color: #5E5E5E;
 }
@@ -463,12 +472,12 @@ footer ul li span {
     }
 
     p.blurb {
-        border-bottom: 1.5px solid #B8B8B8;
+        border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: .85em;
         margin-left: 1 em;
         margin-right: 1 em;
 }
-    h2.headline {
+    .headline {
         padding-top: .85em;
         padding-bottom: .45em;
         margin-left: 1 em;
@@ -485,11 +494,12 @@ footer ul li span {
         flex-basis: 34%;
     }
     .author-block{
-        border-bottom: 1.5px solid #B8B8B8;
+        border-bottom: 1.5px solid #C2C2C2;
     }
+
     .shsMinischedrslt{
-        padding-bottom: .5em;
-        border-bottom: 1.5px solid #B8B8B8;
+        padding-bottom: 1.5em;
+        border-bottom: 1.5px solid #C2C2C2;
     }
     .item.first.single h3{
         padding-top: .45em;
@@ -529,11 +539,11 @@ footer ul li span {
     }
     .zone-b .blurb {
         font-size: 1.05em;
-        border-bottom: 1.5px solid #B8B8B8;
+        border-bottom: 1.5px solid #C2C2C2;
         padding-bottom:.85em;
     }
     .author-block {
-        border-bottom: 1.5px solid #b8b8b8;
+        border-bottom: 1.5px solid #C2C2C2;
     }
     .zone-c img{
         padding-left: .75em;
@@ -611,7 +621,7 @@ footer ul li span {
 @media (min-width: 700px) {
     .share button,
     .share img {
-        height: 40px;
+        height: 31px;
     }
 }
 @media (min-width: 800px) {
@@ -642,6 +652,8 @@ footer ul li span {
         display: block;
         float: none;
         width: 100%;
+        padding-top: .85em;
+        padding-bottom: .85em;
     }
     
     .zone-b > div:first-of-type img{
@@ -695,6 +707,8 @@ footer ul li span {
         margin-right: auto;
 /*! justify-self: flex-end; */
 margin-left: 2.25%;
+/* Turn off Zone A on tablets */
+         display:none;
     }
     
     .zone-a .item img{
@@ -721,8 +735,6 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-        margin-left: 1.5em;
-        margin-right: 2em;
     }
     
     .zone-b .without_u img{
@@ -741,6 +753,8 @@ margin-left: 2.25%;
         flex-basis: 30%;
         order: 2;
         margin-right: 1.5em;
+        border-left: 1.5px solid #C2C2C2;
+        padding-left: 1.7em;
     }
     
 
@@ -750,7 +764,7 @@ margin-left: 2.25%;
     .zone-b .sec-hl-item{
         display: block;
         overflow: auto;
-        border-bottom: 1.5px solid #B8B8B8;
+        border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: 1em;
         padding-top: 1em;
     }
@@ -819,7 +833,8 @@ margin-left: 2.25%;
     }
     .zone-a {
         flex-basis: 25%;
-        border-right: 1px solid #b8b8b8;
+        border-right: 1px solid #C2C2C2;
+        margin-bottom: 3vh;
     }
     
     /*     Remove bottom border on zone A  */
@@ -879,20 +894,23 @@ margin-left: 2.25%;
     .zone-b .sec-hl-item{
         overflow: auto;
         padding-bottom: 1em;
-        border-bottom: 1px solid #b8b8b8;
+        border-bottom: 1px solid #C2C2C2;
         margin-bottom: 1em;
-    }
-    
-    
-    
-    
-    
+    }   
     .zone-c {
         flex-basis: 25%;
-        border-left: 1px solid #b8b8b8;
+        border-left: 1px solid #C2C2C2;
+/*         creates space between the border and bottomo of page */
+        margin-bottom: 3vh;
     }
     .author {
         flex-basis: 18%
+    }
+}
+/* Changes the EN logo width on very large screens */
+@media (min-width: 1500px) {
+    .logo img {
+        width: 64%;
     }
 }
 
