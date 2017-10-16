@@ -271,6 +271,20 @@ p.blurb {
     height: auto;
     max-width: 100%;
 }
+
+
+/* STATS */
+
+/* Remove stats attribution */
+
+.shsMiniCopyright {
+    display: none;
+}
+
+.shsMiniCopyrightText{
+    display: none;
+}
+
 /* SCHEDULE BOX */
 
 .shsTable a{
@@ -686,6 +700,8 @@ margin-left: 2.25%;
         margin-right: 1.5em;
     }
     
+
+    
 /*     Float images to the right in zone b, with headline and blurb floated left beside them */
     
     .zone-b .sec-hl-item{
@@ -738,6 +754,11 @@ margin-left: 2.25%;
     .title-logo{
         padding-top: 30px;
     }
+    
+/*     Remove bottom border on zone C  */
+    .zone-c > div:last-of-type .illo{
+        border-bottom: 0;
+    }
 }
 @media(min-width: 1280px) {
     .en-share .logo {
@@ -753,6 +774,11 @@ margin-left: 2.25%;
     .zone-a {
         flex-basis: 25%;
         border-right: 1px solid #b8b8b8;
+    }
+    
+    /*     Remove bottom border on zone A  */
+    .zone-a > div:last-of-type .illo{
+        border-bottom: 0;
     }
     .zone-b {
         flex-basis: 45%;
