@@ -382,6 +382,10 @@ p.blurb {
 }
 /* STATS BOX */
 
+.spurs-stats {
+    margin-top: 1em;
+}
+
 .spurs-stats table {
     border: 1.5px solid #fff;
     text-align: center;
@@ -484,7 +488,7 @@ footer ul li span {
 
 
 @media (max-width: 499px) {
-    .zone-a > div:nth-child(2) {
+    .spurs-stats{
         display: none;
     }
     .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
@@ -542,6 +546,11 @@ footer ul li span {
     }
 }
 @media (min-width: 500px) {
+
+    .spurs-stats-link{
+        display: none;
+    }
+
     .en-
     .logo {
         display: flex;
@@ -875,6 +884,10 @@ margin-left: 2.25%;
     
     .zone-b .blurb{
         margin-top: 1em;
+    }
+
+    .author-block{
+        border-bottom: none;
     }
     
     
