@@ -14,7 +14,6 @@ body{
 .en-share {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     /*! padding-bottom: .25em; */
     /*! padding-top: 0.25em; */
     position: fixed;
@@ -23,19 +22,12 @@ body{
     background: #111;
     /*! align-content: center; */
     align-items: center;
-    padding-left: 1%;
-    padding-right: 1%;
-<<<<<<< HEAD
-    /*! height: 80%; */
-    top: 0;
-=======
-    height: 7%;
->>>>>>> annie
+    min-height: 40px;
 }
 .en-share .logo {
     flex-basis: 40%;
 }
-.logo img {
+.en-share .logo img {
     width: 78%;
     padding-left: .5em;
 }
@@ -62,11 +54,8 @@ body{
     font-size: .85em;
     margin-left: 1.75em;
     border-radius: 15px;
-<<<<<<< HEAD
     /*! margin-bottom: .5em; */
     /*! align-self: center; */
-=======
->>>>>>> annie
 }
 .share img {
     align-self: flex-end;
@@ -110,7 +99,7 @@ body{
     font-family: verdana;
     font-size: 1em;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
-    height: 25vh;
+    /*! height: 25vh; */
     margin-top: 37px;
     position: relative;
 }
@@ -567,17 +556,17 @@ footer ul li span {
 }
 @media (min-width: 500px) {
 
-    .spurs-stats-link{
-        display: none;
-    }
-
     .en-
     .logo {
         display: flex;
         flex-basis: 50%;
     }
+
+    .en-share{
+        justify-content: space-between;
+    }
     .en-share .share {
-        flex-basis: 45%;
+        flex-basis: 40%;
     }
     .zone-b .without_u img {
         width: 100%;
@@ -622,6 +611,7 @@ footer ul li span {
 
     .en-share .share{
         flex-basis: 30%;
+        /*! align-self: center; */
     }
 
     .share img, .share a{
@@ -674,7 +664,7 @@ footer ul li span {
 }
 @media (min-width: 800px) {
     .en-share .share {
-        flex-basis: 25%;
+        flex-basis: 20%;
     }
     .title-logo {
         height: 30vh;
@@ -692,6 +682,10 @@ footer ul li span {
 }
 
 @media (min-width: 900px){
+
+    .spurs-stats-link{
+        display: none;
+    }
     
 /*     Lead story in zone b - dump the inlining of photos with
     text for a more presentational look */
@@ -783,8 +777,8 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-        margin-left: 1.5em;
-        margin-right: 2em;
+        /*! margin-left: 1.5em; */
+        /*! margin-right: 2em; */
     }
     
     .zone-b .without_u img{
@@ -963,7 +957,7 @@ margin-left: 2.25%;
 }
 /* Changes the EN logo width on very large screens */
 @media (min-width: 1500px) {
-    .logo img {
+    .title-logo .logo img {
         width: 64%;
     }
 }
