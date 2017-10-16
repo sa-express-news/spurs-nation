@@ -1,6 +1,7 @@
 body{
     overflow-x: hidden;
 }
+
 /* HEADER/BANNER */
 
 .spurs-nation-header {
@@ -25,12 +26,9 @@ body{
     align-items: center;
     padding-left: 1%;
     padding-right: 1%;
-<<<<<<< HEAD
-    /*! height: 80%; */
+
     top: 0;
-=======
-    height: 7%;
->>>>>>> annie
+
 }
 .en-share .logo {
     flex-basis: 40%;
@@ -62,11 +60,6 @@ body{
     font-size: .85em;
     margin-left: 1.75em;
     border-radius: 15px;
-<<<<<<< HEAD
-    /*! margin-bottom: .5em; */
-    /*! align-self: center; */
-=======
->>>>>>> annie
 }
 .share img {
     align-self: flex-end;
@@ -107,7 +100,7 @@ body{
     color: white;
     display: flex;
     flex-flow: row nowrap;
-    font-family: verdana;
+    font-family: 'Russo One';
     font-size: 1em;
     /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
     height: 25vh;
@@ -121,12 +114,11 @@ body{
     text-shadow: .06em .06em #000;
 }
 .title-logo h3 {
-    font-family: inherit;
-    font-size: 1.5em;
-    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
     padding-top: 5vh;
     padding-bottom: .8vh;
     /*! font-family: verdana; */
+    font-weigth: 200;
 }
 .title-logo .title {
     flex-basis: 80%;
@@ -188,11 +180,16 @@ h2.headline,
 h3.headline {
     color: #222;
     font-size: 1.1em;
-    letter-spacing: 0.03em;
+    letter-spacing: 0em;
     text-transform: none;
     line-height: normal;
     margin-top: .5em;
-    font-family: helvetica;
+    font-family: verdana;
+}
+h2.headline a,
+h3.headline a {
+    color: inherit;
+    text-decoration: none;
 }
 h2.headline a:visited,
 h3.headline a:visited {
@@ -201,11 +198,10 @@ h3.headline a:visited {
     font-family: helvetica;
     font-size: 1em;
 }
-h2.headline a,
-h3.headline a {
+h2.headline a:hover,
+h3.headline a:hover {
     text-decoration: underline;
      color: inherit;
-    text-decoration: none;
     font-family: helvetica;
     font-size: 1em;
 }
@@ -393,8 +389,10 @@ p.blurb {
     display: none;
 }
 .spurs-schedule > div {
-    width: 96%;
-    margin: 0 auto;
+    width: 100%;
+    /*! margin: 0 auto; */
+    margin: 0;
+    margin-top: .85em;
 }
 .spurs-schedule table {
     width: 100%;
