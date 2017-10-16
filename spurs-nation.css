@@ -51,7 +51,7 @@ body{
     /*! margin-top: auto; */
     padding: .15em;
     border-style: solid;
-    font-family: verdana;
+    font-family: helvetica;
     font-size: .85em;
     margin-left: 1.75em;
     border-radius: 15px;
@@ -106,13 +106,12 @@ body{
 .title-logo p {
     margin: 0;
     padding-left: 1.5vw;
-    text-shadow: .06em .06em #000;
+    text-shadow: .045em .055em #000;
 }
 .title-logo h3 {
     font-family: 'Russo One', sans-serif;
     padding-top: 5vh;
     padding-bottom: .8vh;
-    /*! font-family: verdana; */
     font-weigth: 200;
 }
 .title-logo .title {
@@ -179,7 +178,7 @@ h3.headline {
     text-transform: none;
     line-height: normal;
     margin-top: .5em;
-    font-family: verdana;
+    font-family: helvetica;
 }
 h2.headline a,
 h3.headline a {
@@ -190,20 +189,20 @@ h2.headline a:visited,
 h3.headline a:visited {
     color: inherit;
     text-decoration: none;
-    font-family: helvetica;
     font-size: 1em;
 }
 h2.headline a:hover,
-h3.headline a:hover {
-    text-decoration: underline;
-     color: inherit;
-    font-family: helvetica;
+h3.headline a:hover,
+p.byline a:hover,
+.item.rel-links a:hover{
+    text-decoration: none;
+     color: #999999;
     font-size: 1em;
 }
 p.byline {
     color: #0a0a0a;
     font-weight: bold;
-    padding-bottom: .5em;
+    /*! padding-bottom: .5em; */
 }
 p.blurb {
     color: #2d2d2d;
@@ -253,8 +252,18 @@ p.blurb {
 
 .zone-b > div:first-of-type img{
     width: 100%;
+    padding-bottom: .85em;
 }
-
+.zone-b > div:first-of-type .headline {
+    padding-bottom: .5em;
+}
+.zone-b > div:first-of-type .detail {
+    padding-top: .75em;
+    padding-bottom: .75em;
+}
+.zone-b > div:first-of-type .byline {
+    padding-bottom: .5em;
+}
 .zone-b > div:first-of-type .headline.display-above{
     display: none;
 }
@@ -345,31 +354,33 @@ p.blurb {
 /* SCHEDULE BOX */
 
 .shsTable a{
-    text-decoration: underline;
+    text-decoration: none;
     color: inherit;
 }
+.shsTable a:hover{
+    color: #b8b8b8;
+}
 .spurs-schedule table {
-    border: 1px solid black;
     text-align: center;
 }
 .spurs-schedule table td {
-    border: 1px solid gray;
+    border-bottom: 1.5px solid black;
     padding: .5em;
-    background-color:#fff;
-    color: #000;
 }
 
 
 .spurs-schedule table .shsTableTtlRow > td{
-    background: #000;
-    color: #fff;
+    color: #000;
 }
 .spurs-schedule table .shsTableTtlRow td {
     font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     /*! color: #fff; */
     font-family: helvetica;
+}
+.spurs-schedule table tr:nth-child(odd){
+    background-color: #ccc;
 }
 
 .spurs-schedule table .shsTableTtlRow td:before {
@@ -379,6 +390,8 @@ p.blurb {
 .spurs-schedule table tr:not(.shsTableTtlRow) {
     background: #f8f8f8;
     font-family: helvetica;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 .spurs-schedule table .shsTimezone:not(.shsCTZone) {
     display: none;
@@ -506,7 +519,10 @@ footer ul li span {
     .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
         opacity: 0;
     }
-
+    .title-logo h3,
+    .title-logo p {
+        text-shadow: .085em .085em #000;
+    }
     p.blurb {
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: .85em;
@@ -565,7 +581,6 @@ footer ul li span {
         display: flex;
         flex-basis: 50%;
     }
-
     .en-share{
         justify-content: space-between;
     }
@@ -781,6 +796,7 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
+        margin-left: 1.5em;
         /*! margin-left: 1.5em; */
         /*! margin-right: 2em; */
     }
@@ -802,7 +818,7 @@ margin-left: 2.25%;
         order: 2;
         margin-right: 1.5em;
         border-left: 1.5px solid #C2C2C2;
-        padding-left: 1.7em;
+        padding-left: 1.5em;
     }
     
 
@@ -962,7 +978,7 @@ margin-left: 2.25%;
 /* Changes the EN logo width on very large screens */
 @media (min-width: 1500px) {
     .title-logo .logo img {
-        width: 64%;
+        /*! width: 92%; */
     }
 }
 
