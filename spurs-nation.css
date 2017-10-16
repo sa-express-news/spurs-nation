@@ -326,13 +326,9 @@ p.blurb {
     margin: 1em 0;
     /*! border-bottom: 1px solid black; */
 }
-<<<<<<< HEAD
 .author-container figcaption {
 /*     display: none; */
 }
-=======
-
->>>>>>> annie
 .hst-freeform hdnce-e hdnce-item-84206{
     color: #5E5E5E;
 }
@@ -787,12 +783,8 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-<<<<<<< HEAD
         margin-left: 1.5em;
         margin-right: 2em;
-        /*! flex-shrink: 1; */
-=======
->>>>>>> annie
     }
     
     .zone-b .without_u img{
@@ -811,14 +803,8 @@ margin-left: 2.25%;
         flex-basis: 30%;
         order: 2;
         margin-right: 1.5em;
-<<<<<<< HEAD
-        /*! flex-shrink: 1; */
-        /*! flex-wrap: wrap; */
-        /*! position: fixed; */
-=======
         border-left: 1.5px solid #C2C2C2;
         padding-left: 1.7em;
->>>>>>> annie
     }
     
 
