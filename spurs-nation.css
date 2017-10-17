@@ -32,6 +32,7 @@ body{
 .en-share .logo img {
     width: 78%;
     padding-left: .5em;
+    max-width: 400px;
 }
 .en-share .share {
     display: flex;
@@ -96,24 +97,25 @@ body{
     color: white;
     display: flex;
     flex-flow: row nowrap;
-    font-family: 'Russo One';
-    font-size: 1em;
-    /* font-family: Rockwell Extra Bold, Rockwell Bold, monospace; */
-    /*! height: 25vh; */
+    font-family: Rokkitt Extra Bold, serif;
+    font-weight: Extra Bold;
     margin-top: 37px;
     position: relative;
 }
+/* Add in google font for header logo */
 .title-logo h3,
 .title-logo p {
     margin: 0;
+    padding-top: .5em;
     padding-left: 1.5vw;
     text-shadow: .045em .055em #000;
+    font-family: 'Rokkitt', serif;
 }
 .title-logo h3 {
-    font-family: 'Russo One', sans-serif;
-    padding-top: 5vh;
-    padding-bottom: .8vh;
-    font-weigth: 200;
+    font-weight: 900;
+}
+.title-logo p{
+    font-weight: 400;
 }
 .title-logo .title {
     flex-basis: 80%;
@@ -272,6 +274,10 @@ p.blurb {
 .zone-b > div:first-of-type .headline.display-below{
     display: block;
 }
+.zone-b .headline {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
 .headline.display-below {
     display: none;
 }
@@ -334,7 +340,8 @@ p.blurb {
 }
 
 .author a:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: #999999
 }
 
 
@@ -363,7 +370,8 @@ p.blurb {
 }
 
 .spurs-stats-link a:hover{
-    text-decoration: underline;
+    text-decoration: none;
+    color: #999999;
 }
 
 .shsMiniCopyright {
@@ -387,13 +395,13 @@ p.blurb {
     text-align: center;
 }
 .spurs-schedule table td {
-    border-bottom: 1.5px solid black;
+    border: 1.5px solid black;
     padding: .5em;
 }
 
 
 .spurs-schedule table .shsTableTtlRow > td{
-    color: #000;
+    color: #fff;
 }
 .spurs-schedule table .shsTableTtlRow td {
     font-weight: bold;
@@ -401,13 +409,14 @@ p.blurb {
     text-align: left;
     /*! color: #fff; */
     font-family: helvetica;
+    background-color: #000;
 }
 .spurs-schedule table tr:nth-child(odd){
     background-color: #ccc;
 }
 
 .spurs-schedule table .shsTableTtlRow td:before {
-    content: "SPURS "
+/*     content: "SPURS " */
 }
 
 .spurs-schedule table tr:not(.shsTableTtlRow) {
@@ -441,8 +450,6 @@ p.blurb {
 }
 .spurs-stats td {
     border: 1px solid gray;
-    padding: .5em;
-    color: #000;
 }
 .spurs-stats .shsTableTtlRow {
     background: #222;
@@ -451,6 +458,8 @@ p.blurb {
     font-weight: bold;
     text-transform: uppercase;
     color: #fff;
+    padding-left: .5em;
+    text-align: left;
 }
 .spurs-stats tr:not(.shsTableTtlRow) {
     /* background: ; */
@@ -460,7 +469,6 @@ p.blurb {
 }
 
 .spurs-stats .shsTable tr:nth-of-type(n+8){
-    display:none;
 }
 
 
@@ -550,6 +558,13 @@ footer ul li span {
     .title-logo p {
         text-shadow: .085em .085em #000;
     }
+    .title-logo h3 {
+        padding-top:.5em;
+        font-size: 1.4em;
+    }
+    .title-logo p{
+        font-size: .7em;
+    }
     p.blurb {
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: .85em;
@@ -578,7 +593,6 @@ footer ul li span {
 
     .shsMinischedrslt{
         padding-bottom: 1.5em;
-        border-bottom: 1.5px solid #C2C2C2;
     }
     .item.first.single h3{
         padding-top: .45em;
@@ -600,6 +614,10 @@ footer ul li span {
     .zone-c >div:last-of-type .illo{
         margin-bottom: 1em;
     }
+    .spurs-stats-link {
+        border-bottom: 1.5px solid #C2C2C2;
+        padding-bottom: .5em;
+    }
 }
 @media (min-width: 500px) {
 
@@ -613,6 +631,12 @@ footer ul li span {
     }
     .en-share .share {
         flex-basis: 40%;
+    }
+        .title-logo h3 {
+        font-size: 1.5em;
+    }
+    .title-logo p{
+        font-size: .7em;
     }
     .zone-b .without_u img {
         width: 100%;
@@ -645,6 +669,11 @@ footer ul li span {
     .zone-a img {
         padding-top: .75em;
         padding-left: .75em;
+    }
+        .spurs-stats-link {
+        border-bottom: 1.5px solid #C2C2C2;
+        padding-bottom: .5em;
+        text-align: center;
     }
 }
 
@@ -726,13 +755,19 @@ footer ul li span {
         flex-basis: 17%;
     }
 }
+/* Make 'more from the writers' match spacing on other collections */
+@media (max-width: 899px) {
+    .author-block h3 {
+        margin-top:.15em;
+    }
+}
 
 @media (min-width: 900px){
 
-    .spurs-stats-link{
+/*     .spurs-stats-link{
         display: none;
     }
-    
+     */
 /*     Lead story in zone b - dump the inlining of photos with
     text for a more presentational look */
     
@@ -757,7 +792,10 @@ footer ul li span {
             }
 @media (min-width: 1000px) {
     .title-logo h3 {
-        font-size: 2.75em;
+        font-size: 4.75em;
+    }
+    .title-logo p {
+        font-size: 2em;
     }
     .title-logo img {
         max-height: 8em;
@@ -868,6 +906,14 @@ margin-left: 2.25%;
         display: inline;
         float: left;
         padding-bottom: .85em;
+        font-size: 1.1em;
+    }
+    .zone-c .byline {
+        padding-bottom: .5em;
+        font-size: .9em;
+    }
+    .zone-c .detail {
+        font-size: .9em;
     }
     
     .zone-b .blurb{
@@ -997,16 +1043,34 @@ margin-left: 2.25%;
         padding-bottom: 1em;
         border-bottom: 1px solid #C2C2C2;
         margin-bottom: 1em;
-    }   
+    }
+    .zone-a .byline{
+        padding-bottom: .5em;
+    }
     .zone-c {
         flex-basis: 25%;
         border-left: 1px solid #C2C2C2;
 /*         creates space between the border and bottomo of page */
         margin-bottom: 3vh;
     }
+    .zone-c img{
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-bottom: 1em;
+    }
+    .zone-c .headline {
+        font-size: 1.1em;
+ }
+    .zone-c .byline {
+        font-size: .9em;
+        padding-bottom: .5em;
+    }
+    .zone-c .detail {
+        font-size: .9em;
+    }
     .author {
         flex-basis: 18%
-    }
+    } 
 }
 /* Changes the EN logo width on very large screens */
 @media (min-width: 1500px) {
