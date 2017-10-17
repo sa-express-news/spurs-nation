@@ -77,6 +77,10 @@ body{
     width: 44px;
 }
 
+.page-content .en-share .facebook, .page-content .en-share .twitter, .page-content .en-share .mail{
+    display: none;
+}
+
 .share a.facebook{
     background-position: -88px 0;
 }
