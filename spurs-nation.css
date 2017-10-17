@@ -135,6 +135,10 @@ body{
     padding-right: 1vw;
 }
 
+.title p {
+    font-size: 18px;
+}
+
 /* MAIN SECTION/FRAMEWORK */
 /* The main site section */
 
@@ -474,6 +478,12 @@ p.blurb {
 
 .spurs-stats .shsTable tr:nth-of-type(n+8){
 }
+.spurs-stats .shsTableSubttlRow {
+    display:none;
+}
+.spurs-stats .shsTableTtlRow td {
+    background-color: #000;
+}
 
 
 /* Slideshow */
@@ -567,7 +577,8 @@ footer ul li span {
         font-size: 1.4em;
     }
     .title-logo p{
-        font-size: .7em;
+        /*! font-size: .7em; */
+        /*! font-size: 1em; */
     }
     p.blurb {
         border-bottom: 1.5px solid #C2C2C2;
@@ -640,7 +651,7 @@ footer ul li span {
         font-size: 1.5em;
     }
     .title-logo p{
-        font-size: .7em;
+        /*! font-size: .7em; */
     }
     .zone-b .without_u img {
         width: 100%;
@@ -651,7 +662,7 @@ footer ul li span {
     .zone-b .blurb {
         font-size: 1.05em;
         border-bottom: 1.5px solid #C2C2C2;
-        padding-bottom:.85em;
+        /*! padding-bottom:.85em; */
     }
     .author-block {
         border-bottom: 1.5px solid #C2C2C2;
@@ -676,8 +687,7 @@ footer ul li span {
     }
         .spurs-stats-link {
         border-bottom: 1.5px solid #C2C2C2;
-        padding-bottom: .5em;
-        text-align: center;
+        padding-bottom: 1em;
     }
 }
 
@@ -697,7 +707,11 @@ footer ul li span {
         display: none;
     }
 }
-
+@media (min-width: 500px) and (max-width: 899px) {
+    .spurs-schedule > div {
+        width: 50%;
+    }
+}
 @media (min-width: 410px) and (max-width: 500px) {
     .en-share .logo {
         display: flex;
@@ -764,6 +778,9 @@ footer ul li span {
     .author-block h3 {
         margin-top:.15em;
     }
+        .zone-b .blurb {
+            padding-bottom: .5em;
+    }
 }
 
 @media (min-width: 900px){
@@ -804,6 +821,9 @@ footer ul li span {
     .title-logo img {
         max-height: 8em;
         padding-right: 1em;
+    }
+    .zone-c img {
+        margin-bottom: .5em;
     }
 }
 @media (max-width: 1023px) {
@@ -865,7 +885,8 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-        margin-left: 1.5em;
+        margin-left: 1.2em;
+        margin-right: 1.25em;
         /*! margin-left: 1.5em; */
         /*! margin-right: 2em; */
     }
@@ -888,6 +909,7 @@ margin-left: 2.25%;
         margin-right: 1.5em;
         border-left: 1.5px solid #C2C2C2;
         padding-left: 1.5em;
+        margin-bottom: 2em;
     }
     
 
