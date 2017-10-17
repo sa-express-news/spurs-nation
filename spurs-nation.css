@@ -470,6 +470,12 @@ p.blurb {
 
 .spurs-stats .shsTable tr:nth-of-type(n+8){
 }
+.spurs-stats .shsTableSubttlRow {
+    display:none;
+}
+.spurs-stats .shsTableTtlRow td {
+    background-color: #000;
+}
 
 
 /* Slideshow */
@@ -672,7 +678,7 @@ footer ul li span {
     }
         .spurs-stats-link {
         border-bottom: 1.5px solid #C2C2C2;
-        padding-bottom: .5em;
+        padding-bottom: 1em;
         text-align: center;
     }
 }
