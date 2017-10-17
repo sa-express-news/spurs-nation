@@ -13,6 +13,7 @@ body{
 }
 
 .en-share {
+    align-items: center;
     display: flex;
     flex-flow: row nowrap;
     /*! padding-bottom: .25em; */
@@ -22,7 +23,7 @@ body{
     z-index: 10;
     background: #111;
     /*! align-content: center; */
-    align-items: center;
+    top: 0;
     min-height: 40px;
 }
 .en-share .logo {
@@ -301,7 +302,7 @@ p.blurb {
     margin: .5em 0;
 }
 .item.rel-links h4:before {
-    content: '>>'
+    content: '>> ';
 }
 /* AUTHOR BOX */
 
@@ -1003,11 +1004,8 @@ margin-left: 2.25%;
 /* Changes the EN logo width on very large screens */
 @media (min-width: 1500px) {
     .title-logo .logo img {
-<<<<<<< HEAD
         /*! width: 64%; */
-=======
         /*! width: 92%; */
->>>>>>> annie
     }
 }
 
