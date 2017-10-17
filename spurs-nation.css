@@ -317,9 +317,17 @@ p.blurb {
     margin: 1em 0;
     /*! border-bottom: 1px solid black; */
 }
-.author-container figcaption {
-/*     display: none; */
+
+.author a, .author a:visited{
+    color: inherit;
+    text-decoration: none;
 }
+
+.author a:hover{
+    text-decoration: underline;
+}
+
+
 .hst-freeform hdnce-e hdnce-item-84206{
     color: #5E5E5E;
 }
@@ -333,6 +341,20 @@ p.blurb {
 /* STATS */
 
 /* Remove stats attribution */
+
+.spurs-stats-link{
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.spurs-stats-link a, .spurs-stats-link a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+
+.spurs-stats-link a:hover{
+    text-decoration: underline;
+}
 
 .shsMiniCopyright {
     display: none;
@@ -500,9 +522,6 @@ footer ul li span {
 
 
 @media (max-width: 499px) {
-    .spurs-stats{
-        display: none;
-    }
     .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
         opacity: 0;
     }
@@ -840,7 +859,7 @@ margin-left: 2.25%;
     .spurs-nation-header .en-share .logo {
         flex-basis: 35%;
     }
-    .shsTable td:nth-of-type(3n) {
+    .spurs-stats .shsTable td:nth-of-type(3n) {
         display: none;
     }
     .shsTable td {
@@ -863,6 +882,12 @@ margin-left: 2.25%;
 /*     Remove bottom border on zone C  */
     .zone-c > div:last-of-type .illo{
         border-bottom: 0;
+    }
+}
+
+@media (max-width: 1279px){
+    .spurs-stats{
+        display: none;
     }
 }
 
@@ -962,7 +987,7 @@ margin-left: 2.25%;
 /* Changes the EN logo width on very large screens */
 @media (min-width: 1500px) {
     .title-logo .logo img {
-        width: 64%;
+        /*! width: 64%; */
     }
 }
 
