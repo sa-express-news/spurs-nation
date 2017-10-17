@@ -64,7 +64,7 @@ body{
     /*! padding-left: .5em; */
 }
 
-.share a{
+.share a:not(:first-of-type){
     background: url('http://ww1.hdnux.com/photos/53/52/26/11445656/8/rawImage.png') 0 0 no-repeat;
     background-position-x: 0px;
     background-position-y: 0px;
