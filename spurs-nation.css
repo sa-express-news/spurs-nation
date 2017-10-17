@@ -535,6 +535,13 @@ footer ul li span {
 }
 
 
+@media (min-height: 400px){
+    .title-logo h3 {
+        padding-top: 3vh;
+    }
+}
+
+
 @media (max-width: 499px) {
     .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
         opacity: 0;
@@ -549,7 +556,7 @@ footer ul li span {
         margin-left: 1 em;
         margin-right: 1 em;
 }
-    .headline {
+    .sn-zone .headline {
         padding-top: .85em;
         padding-bottom: .45em;
         margin-left: 1 em;
