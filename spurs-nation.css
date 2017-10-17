@@ -881,7 +881,8 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-        margin-left: 1.5em;
+        margin-left: 1.2em;
+        margin-right: 1.25em;
         /*! margin-left: 1.5em; */
         /*! margin-right: 2em; */
     }
