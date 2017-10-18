@@ -833,6 +833,11 @@ footer ul li span {
         float: left;
     }
     
+    .zone-b li h4{
+        width: 45%;
+        float: left;
+    }
+    
 }
 
 
@@ -980,6 +985,7 @@ margin-left: 2.25%;
         overflow-x: hidden;
     }
     
+    
 /*     .zone-b .without_u, .zone-b .without_u img{
         display: block;
     } */
@@ -1081,6 +1087,10 @@ margin-left: 2.25%;
     
     
     .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
+        float: right;
+    }
+    
+    .zone-b li h4{
         float: right;
     }
 
