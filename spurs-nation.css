@@ -569,6 +569,13 @@ footer ul li span {
     margin: 12px 16px 0 0;
 }
 
+/* ADS */
+
+#A300, #B300{
+    border-bottom: 1.5px solid #C2C2C2;
+    margin: 1em 0;
+}
+
 
 @media (min-height: 400px){
     .title-logo h3 {
