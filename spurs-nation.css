@@ -711,7 +711,7 @@ footer ul li span {
         /*! align-self: center; */
     }
 
-    .share img, .share a:not(first-of-type){
+    .share img, .share a:not(:first-of-type){
         display: none;
     }
 }
@@ -811,6 +811,28 @@ footer ul li span {
     .zone-b > div:first-of-type img{
         margin-top: 1em;
     }
+    
+    /*     Switch zone b lead story to the same presentation as other zone b stories */
+    
+    .zone-b > div:first-of-type .single-img-wrapper{
+        float: right;
+        width: 50%;
+    }
+    
+    .zone-b > div:first-of-type .headline.display-above{
+        display: inline;
+        padding-top: .5em;
+    }
+    
+    .zone-b > div:first-of-type .headline.display-below{
+        display: none;
+    }
+    
+    .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
+        width: 45%;
+        float: left;
+    }
+    
 }
 
 
@@ -906,7 +928,7 @@ margin-left: 2.25%;
 /*     Stlying for the lead image in zone B */
     
     .zone-b > div:first-of-type img{
-        width: 90%;
+        /*! width: 90%; */
         display: block;
         float: none;
     }
@@ -952,6 +974,10 @@ margin-left: 2.25%;
     
     .zone-b .blurb{
         border: none;
+    }
+    
+    .zone-b .illo{
+        overflow-x: hidden;
     }
     
 /*     .zone-b .without_u, .zone-b .without_u img{
@@ -1049,27 +1075,15 @@ margin-left: 2.25%;
     }
     
     
-/*     Switch zone b lead story to the same presentation as other zone b stories */
-    
-    .zone-b > div:first-of-type img{
+        .zone-b > div:first-of-type .single-img-wrapper{
         float: left;
-        width: 50%;
     }
     
-    .zone-b > div:first-of-type .headline.display-above{
-        display: inline;
-        padding-top: .5em;
-    }
-    
-    .zone-b > div:first-of-type .headline.display-below{
-        display: none;
-    }
     
     .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
-        width: 45%;
         float: right;
     }
-    
+
     
 /*     Float images in zone b left, with headline and blurbs floated right */
     
