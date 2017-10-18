@@ -390,6 +390,14 @@ p.blurb {
     display: none;
 }
 
+.shsTableTtlRow td{
+    background: #000;
+}
+
+.shsTableSubttlRow{
+    display: none;
+}
+
 /* SCHEDULE BOX */
 
 .shsTable a{
@@ -703,7 +711,7 @@ footer ul li span {
         /*! align-self: center; */
     }
 
-    .share img, .share a{
+    .share img, .share a:not(first-of-type){
         display: none;
     }
 }
@@ -793,9 +801,9 @@ footer ul li span {
     text for a more presentational look */
     
     .zone-b > div:first-of-type .headline.display-below{
-        display: block;
+/*         display: block;
         float: none;
-        width: 100%;
+        width: 100%; */
         padding-top: .85em;
         padding-bottom: .85em;
     }
@@ -1030,6 +1038,28 @@ margin-left: 2.25%;
 
     .author-block{
         border-bottom: none;
+    }
+    
+    
+/*     Switch zone b lead story to the same presentation as other zone b stories */
+    
+    .zone-b > div:first-of-type img{
+        float: left;
+        width: 50%;
+    }
+    
+    .zone-b > div:first-of-type .headline.display-above{
+        display: inline;
+        padding-top: .5em;
+    }
+    
+    .zone-b > div:first-of-type .headline.display-below{
+        display: none;
+    }
+    
+    .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
+        width: 45%;
+        float: right;
     }
     
     
