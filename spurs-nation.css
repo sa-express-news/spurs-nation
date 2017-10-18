@@ -665,7 +665,7 @@ footer ul li span {
         width: 100%;
     }
     .zone-b .headline {
-        font-size: 1.25em;
+        font-size: 1.35em;
     }
     .zone-b .blurb {
         font-size: 1.05em;
@@ -1022,6 +1022,9 @@ margin-left: 2.25%;
     .zone-a > div:first-of-type{
         margin-top: 1em;
     }
+    .zone-a .byline, .detail{
+        font-size: .9em;
+    }
     .zone-b {
         flex-basis: 45%;
     }
@@ -1031,9 +1034,14 @@ margin-left: 2.25%;
         width: 90%;
         margin: 0 auto;
     }
-    
     .zone-b .blurb{
         margin-top: 1em;
+    }
+    .zone-b .blurb {
+        font-size: .95em;
+    }
+    .zone-b > div:not(:first-of-type) .headline {
+        font-size: 1.15em;
     }
 
     .author-block{
