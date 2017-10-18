@@ -684,9 +684,6 @@ footer ul li span {
         border-bottom: 1.5px solid #C2C2C2;
         /*! padding-bottom:.85em; */
     }
-    .author-block {
-        border-bottom: 1.5px solid #C2C2C2;
-    }
     .zone-c img{
         padding-left: .75em;
         padding-top: .5em;
@@ -708,6 +705,14 @@ footer ul li span {
         .spurs-stats-link {
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: 1em;
+    }
+}
+
+/* Drop the author box border starting at two-column layout */
+
+@media (min-width: 500px) and (max-width: 899px){
+    .author-block {
+        border-bottom: 1.5px solid #C2C2C2;
     }
 }
 
