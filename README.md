@@ -6,7 +6,7 @@ This repo holds the code used to build the new [Spurs Nation](http://expressnews
 
 Spurs Nation uses the relatively new [WCM special section template](https://thetower.atlassian.net/wiki/spaces/CORE/pages/155615431/Creating+Special+Projects+in+the+WCM), designed to provide a blank slate for designers and developers.
 
-The page is a combination of freeforms (to load JavaScript/CSS and add custom components, like a box with author photos) and collections to hold content. Annie Millerbernd has already writted [an excellent guide for producing the page](https://docs.google.com/document/d/1klBIdvElm2mCpLDVIDNv62uwOyaled2Agcs2nu8b-s4/edit), this README is geared toward any development tweaks.
+The page is a combination of freeforms (to load JavaScript/CSS and add custom components, like a box with author photos) and collections to hold content. Annie Millerbernd has already writted [an excellent guide for producing the page](https://docs.google.com/document/d/1klBIdvElm2mCpLDVIDNv62uwOyaled2Agcs2nu8b-s4/edit); this README is geared toward any development tweaks.
 
 ## HTML ##
 
@@ -35,3 +35,15 @@ There are a few other scripts in that folder:
 - One just takes the stats.com table we use and changes the heading from "Spurs: Stats" to "Stats."
 
 Again, I never set up a good build process here. I copied each of the scripts into `ts/spurs-nation.ts` (along with the actual calls to the functions to run them), then passed that Typescript code through the [Typescript Playground](https://www.typescriptlang.org/play/) to convert it to JS. I then passed the JS through [the Babel REPL](https://babeljs.io/repl/), though it's basic ES5 and you should be fine support-wise without that step.
+
+## Making Updates ##
+
+### Updating the Section ###
+
+Simply open the Spurs Nation site section in the WCM, find whatever freeform you need to change, and replace the old code inside with your new stuff.
+
+### Updating the Article Template ###
+
+Head to the EN side of the WCM and search `type:articleDesign`. That will list all the article templates - Spurs Nation should be near the top.
+
+The article template is similar to a section in that you can open the design tab and add/tweak freeforms to your heart's content.
