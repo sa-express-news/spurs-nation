@@ -24,15 +24,16 @@ Since we need to support many old browsers, please remember to autoprefix your C
 
 Not much JS runs on the Spurs Nation page, but what's there is absolutely critical. When we started this project, the WCM's special project template did not allow for separate zones - every freeform/collection stacks on one another. 
 
-We didn't want a one-column page layout, so we created a script that creates three zones - A, B and C - and moves the first x number of freeforms/collections into A, the next x number into B, etc. It's hacky, but it was our only option.
+We didn't want a one-column page layout, so we created a script (`create-zones.ts`) that creates three zones - A, B and C - and moves the first x number of freeforms/collections into A, the next x number into B, etc. It's hacky, but it was our only option.
 
 The code is written in [TypeScript](https://www.typescriptlang.org/), a superset of JavaScript. The `.ts` files live in the `ts/` directory, but if you're more comfortable with JavaScript you can write plain JS straight into those files, too.
 
 There are a few other scripts in that folder:
 
-- One adds collection headings to collections that don't naturally pull them into the WCM.
-- One removes _links_ from collections that _do_ normally have headings, because the WCM makes the links link to pages like the local news section.
-- One just takes the stats.com table we use and changes the heading from "Spurs: Stats" to "Stats."
+- `add-collection-headings.ts` adds collection headings to collections that don't naturally pull them into the WCM.
+- `remove-collection-heading-links.ts` removes _links_ from collections that _do_ normally have headings, because the WCM makes the links link to pages like the local news section.
+- `trim-stats-table-heading.ts` just takes the stats.com table we use and changes the heading from "Spurs: Stats" to "Stats."
+- `resize-vertical-article-photos.ts` lives in the Spurs Nation article template. It shrinks vertical lead photos, because the WCM currently pulls in small versions of them and stretches them and it looks horrible.
 
 Again, I never set up a good build process here. I copied each of the scripts into `ts/spurs-nation.ts` (along with the actual calls to the functions to run them), then passed that Typescript code through the [Typescript Playground](https://www.typescriptlang.org/play/) to convert it to JS. I then passed the JS through [the Babel REPL](https://babeljs.io/repl/), though it's basic ES5 and you should be fine support-wise without that step.
 
