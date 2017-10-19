@@ -937,7 +937,6 @@ margin-left: 2.25%;
     .zone-b {
         flex-basis: 60%;
         order: 1;
-        margin-left: 1.2em;
         margin-right: 1.25em;
         /*! margin-left: 1.5em; */
         /*! margin-right: 2em; */
@@ -958,7 +957,6 @@ margin-left: 2.25%;
     .zone-c {
         flex-basis: 30%;
         order: 2;
-        margin-right: 1.5em;
         border-left: 1.5px solid #C2C2C2;
         padding-left: 1.5em;
         margin-bottom: 2em;
@@ -1001,6 +999,11 @@ margin-left: 2.25%;
     .zone-b .illo{
         overflow-x: hidden;
     }
+
+    /*     Remove bottom border on zone C  */
+    .zone-c > div:last-of-type .illo{
+        border-bottom: 0;
+    }
     
     
 /*     .zone-b .without_u, .zone-b .without_u img{
@@ -1008,6 +1011,20 @@ margin-left: 2.25%;
     } */
 
 }
+
+/* These margins break the two-column layout below 980px, so we wait to throw them on until that point */
+
+@media (min-width: 980px){
+    .zone-b{
+        margin-left: 1.2em;
+    }
+
+    .zone-c{
+        margin-right: 1.5em;
+    }
+}
+
+
 @media(min-width: 1024px) {
     .spurs-nation-header .en-share .logo {
         flex-basis: 35%;
@@ -1030,11 +1047,6 @@ margin-left: 2.25%;
 }
     .title-logo{
         padding-top: 30px;
-    }
-    
-/*     Remove bottom border on zone C  */
-    .zone-c > div:last-of-type .illo{
-        border-bottom: 0;
     }
 }
 
