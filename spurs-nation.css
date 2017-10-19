@@ -571,9 +571,9 @@ footer ul li span {
 
 /* ADS */
 
-#A300, #B300{
+.ad-container{
     border-bottom: 1.5px solid #C2C2C2;
-    margin: 1em 0;
+    padding: 1em 0;
 }
 
 
