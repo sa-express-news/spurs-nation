@@ -36,8 +36,8 @@ const addCollectionHeadings = (document: Document, data: { id: number, heading: 
 const headingsToAdd = [
     { id: 87097, heading: `Writers' Roundtable` },
     { id: 87017, heading: `Photos` },
-    { id: 86829, heading: `Spurs Notebook` },
-    { id: 86830, heading: `Off-Topic Conversation` },
+    { id: 87164, heading: `Spurs Notebook` },
+    { id: 87161, heading: `Off-Topic Conversation` },
     { id: 87094, heading: `Our Take` },
     { id: 87081, heading: 'Spurs by the Numbers' }
 ];
