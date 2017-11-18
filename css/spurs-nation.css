@@ -1,32 +1,34 @@
-body{
+body {
     overflow-x: hidden;
 }
-
 /* HEADER/BANNER */
 
 .spurs-nation-header {
     margin-bottom: 2em;
 }
-
-.fixed-share-container{
+.fixed-share-container {
     height: 100%;
 }
-
 .en-share {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
-    /*! padding-bottom: .25em; */
-    /*! padding-top: 0.25em; */
     position: fixed;
     width: 100%;
     z-index: 10;
     background: #111;
-    /*! align-content: center; */
     top: 0;
     min-height: 40px;
 }
 .en-share .logo {
+    -ms-flex-preferred-size: 40%;
     flex-basis: 40%;
 }
 .en-share .logo img {
@@ -35,9 +37,17 @@ body{
     max-width: 400px;
 }
 .en-share .share {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
+    -ms-flex-preferred-size: 60%;
     flex-basis: 60%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 .share button,
@@ -49,8 +59,8 @@ body{
     border-color: #ba141a;
     color: white;
     font-weight: bold;
+    -ms-flex-preferred-size: 20%;
     flex-basis: 20%;
-    /*! margin-top: auto; */
     padding: .15em;
     border-style: solid;
     font-family: helvetica;
@@ -59,17 +69,18 @@ body{
     border-radius: 15px;
 }
 .share img {
+    -ms-flex-item-align: end;
     align-self: flex-end;
+    -ms-flex-preferred-size: 15%;
     flex-basis: 15%;
-    /*! padding-left: .5em; */
 }
-
-.spurs-nation-header > a, .spurs-nation-header > a:visited, .spurs-nation-header > a:hover{
+.spurs-nation-header > a,
+.spurs-nation-header > a:visited,
+.spurs-nation-header > a:hover {
     text-decoration: none;
     color: inherit;
 }
-
-.share a:not(:first-of-type){
+.share a:not(:first-of-type) {
     background: url('http://ww1.hdnux.com/photos/53/52/26/11445656/8/rawImage.png') 0 0 no-repeat;
     background-position-x: 0px;
     background-position-y: 0px;
@@ -81,30 +92,35 @@ body{
     margin: 0;
     width: 44px;
 }
-
-.page-content .en-share .facebook, .page-content .en-share .twitter, .page-content .en-share .mail{
+.page-content .en-share .facebook,
+.page-content .en-share .twitter,
+.page-content .en-share .mail {
     display: none;
 }
-
-.share a.facebook{
+.share a.facebook {
     background-position: -88px 0;
 }
-
-.share a.twitter{
+.share a.twitter {
     background-position: -132px 0;
 }
-
-.share a.mail{
+.share a.mail {
     background-position: -176px 0;
 }
-
 .title-logo {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.1))), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("https://s3.amazonaws.com/projects.expressnews.com/spurs-nation/img/manu-cropped.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     font-family: Rokkitt Extra Bold, serif;
     font-weight: Extra Bold;
@@ -112,6 +128,7 @@ body{
     position: relative;
 }
 /* Add in google font for header logo */
+
 .title-logo h3,
 .title-logo p {
     margin: 0;
@@ -123,10 +140,11 @@ body{
 .title-logo h3 {
     font-weight: 900;
 }
-.title-logo p{
+.title-logo p {
     font-weight: 400;
 }
 .title-logo .title {
+    -ms-flex-preferred-size: 80%;
     flex-basis: 80%;
     padding-bottom: 5vh;
 }
@@ -139,16 +157,19 @@ body{
     max-height: 5em;
     padding-right: 1vw;
 }
-
 .title p {
     font-size: 18px;
 }
-
 /* MAIN SECTION/FRAMEWORK */
 /* The main site section */
 
 section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     margin: 0 auto;
     width: 80%;
@@ -162,30 +183,30 @@ section {
 .sn-zone > div {
     clear: both;
 }
-.sn-zone > div:not(:last-of-type) {
-}
 /* STORY STYLING */
-
-div.collection {
-    /* overflow: auto; */
-}
-
 /* This is the container for non-refer collections */
-.sec-hl-item{
-/*     padding-top: 1.5em;
-    padding-bottom: 1.5em; */
+
+.sec-hl-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
 }
-
 /* Set the headline below the photo, but above the blurb */
-.sec-hl-item .headline{
+
+.sec-hl-item .headline {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
     order: 1;
 }
-.sec-hl-item .blurb{
+.sec-hl-item .blurb {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
 }
-
 h2.headline,
 h3.headline {
     color: #222;
@@ -210,15 +231,14 @@ h3.headline a:visited {
 h2.headline a:hover,
 h3.headline a:hover,
 p.byline a:hover,
-.item.rel-links a:hover{
+.item.rel-links a:hover {
     text-decoration: none;
-     color: #999999;
+    color: #999999;
     font-size: 1em;
 }
 p.byline {
     color: #0a0a0a;
     font-weight: bold;
-    /*! padding-bottom: .5em; */
 }
 p.blurb {
     color: #2d2d2d;
@@ -239,11 +259,9 @@ p.blurb {
     width: 39%;
     float: right;
     padding-left: .5em;
-/*     width: 100%; */
 }
 .without_u img,
 .single-img-wrapper img {
-    /*! display: inline; */
     margin-right: 0%;
 }
 .illo {
@@ -251,9 +269,6 @@ p.blurb {
     border-bottom: 1.5px solid #C2C2C2;
     padding-bottom: 1em;
 }
-
-
-
 .item.first.single {
     /* Make refer collection photos fit within the div so the border looks right */
     
@@ -263,10 +278,9 @@ p.blurb {
     
     display: inline;
 }
-
 /* Buck the usual refer collection photo styling on the main story in zone b */
 
-.zone-b > div:first-of-type img{
+.zone-b > div:first-of-type img {
     width: 100%;
     padding-bottom: .85em;
 }
@@ -280,11 +294,10 @@ p.blurb {
 .zone-b > div:first-of-type .byline {
     padding-bottom: .5em;
 }
-.zone-b > div:first-of-type .headline.display-above{
+.zone-b > div:first-of-type .headline.display-above {
     display: none;
 }
-
-.zone-b > div:first-of-type .headline.display-below{
+.zone-b > div:first-of-type .headline.display-below {
     display: block;
 }
 .zone-b .headline {
@@ -294,18 +307,24 @@ p.blurb {
 .headline.display-below {
     display: none;
 }
-.kicker-link, .kicker-link a, .author-block h3 {
+.kicker-link,
+.kicker-link a,
+.author-block h3 {
     color: #949494;
     text-decoration: none;
     text-transform: uppercase;
     margin-bottom: .85em;
     margin-top: 1em;
 }
-
 /* Stories in non-refer collections */
-.sec-hl-item{
-    /*! margin: 1em 0; */
+
+.sec-hl-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
 }
 /* Refers */
@@ -326,8 +345,14 @@ p.blurb {
 /* AUTHOR BOX */
 
 .author-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     width: 100%;
     color: #0a0a0a;
@@ -339,26 +364,23 @@ p.blurb {
     text-align: center;
     font-size: 80%;
     padding-top: .5em;
-/*     Styles all author names the same */
+    /*     Styles all author names the same */
 }
 .author {
+    -ms-flex-preferred-size: 34%;
     flex-basis: 34%;
     margin: 1em 0;
-    /*! border-bottom: 1px solid black; */
 }
-
-.author a, .author a:visited{
+.author a,
+.author a:visited {
     color: inherit;
     text-decoration: none;
 }
-
-.author a:hover{
+.author a:hover {
     text-decoration: none;
     color: #999999
 }
-
-
-.hst-freeform hdnce-e hdnce-item-84206{
+.hst-freeform hdnce-e hdnce-item-84206 {
     color: #5E5E5E;
 }
 .author img {
@@ -366,50 +388,41 @@ p.blurb {
     height: auto;
     max-width: 100%;
 }
-
-
 /* STATS */
-
 /* Remove stats attribution */
 
-.spurs-stats-link{
+.spurs-stats-link {
     margin-top: 1em;
     font-weight: bold;
 }
-
-.spurs-stats-link a, .spurs-stats-link a:visited{
+.spurs-stats-link a,
+.spurs-stats-link a:visited {
     color: inherit;
     text-decoration: none;
 }
-
-.spurs-stats-link a:hover{
+.spurs-stats-link a:hover {
     text-decoration: none;
     color: #999999;
 }
-
 .shsMiniCopyright {
     display: none;
 }
-
-.shsMiniCopyrightText{
+.shsMiniCopyrightText {
     display: none;
 }
-
-.shsTableTtlRow td{
+.shsTableTtlRow td {
     background: #000;
 }
-
-.shsTableSubttlRow{
+.shsTableSubttlRow {
     display: none;
 }
-
 /* SCHEDULE BOX */
 
-.shsTable a{
+.shsTable a {
     text-decoration: none;
     color: inherit;
 }
-.shsTable a:hover{
+.shsTable a:hover {
     color: #b8b8b8;
 }
 .spurs-schedule table {
@@ -419,27 +432,19 @@ p.blurb {
     border: 1.5px solid black;
     padding: .5em;
 }
-
-
-.spurs-schedule table .shsTableTtlRow > td{
+.spurs-schedule table .shsTableTtlRow > td {
     color: #fff;
 }
 .spurs-schedule table .shsTableTtlRow td {
     font-weight: bold;
     text-transform: uppercase;
     text-align: left;
-    /*! color: #fff; */
     font-family: helvetica;
     background-color: #000;
 }
-.spurs-schedule table tr:nth-child(odd){
+.spurs-schedule table tr:nth-child(odd) {
     background-color: #ccc;
 }
-
-.spurs-schedule table .shsTableTtlRow td:before {
-/*     content: "SPURS " */
-}
-
 .spurs-schedule table tr:not(.shsTableTtlRow) {
     background: #f8f8f8;
     font-family: helvetica;
@@ -451,7 +456,6 @@ p.blurb {
 }
 .spurs-schedule > div {
     width: 100%;
-    /*! margin: 0 auto; */
     margin: 0;
     margin-top: .85em;
 }
@@ -463,7 +467,6 @@ p.blurb {
 .spurs-stats {
     margin-top: 1em;
 }
-
 .spurs-stats table {
     border: 1.5px solid #fff;
     text-align: center;
@@ -482,45 +485,34 @@ p.blurb {
     padding-left: .5em;
     text-align: left;
 }
-.spurs-stats tr:not(.shsTableTtlRow) {
-    /* background: ; */
-}
 .spurs-stats .shsTimezone:not(.shsCTZone) {
     display: none;
 }
-
-.spurs-stats .shsTable tr:nth-of-type(n+8){
-}
 .spurs-stats .shsTableSubttlRow {
-    display:none;
+    display: none;
 }
 .spurs-stats .shsTableTtlRow td {
     background-color: #000;
 }
-
-
 /* Slideshow */
 
 div.sp-centerpiece {
     margin: 0;
     margin-top: 1.5em;
 }
-
-.zone-b .sp-centerpiece .slide-bullets .active{
+.zone-b .sp-centerpiece .slide-bullets .active {
     background-color: #333;
 }
-
-.sp-centerpiece .item span a{
+.sp-centerpiece .item span a {
     font-family: helvetica;
     font-size: .85em;
     font-weight: bold;
     text-shadow: 0.08em .08em .08em #000;
 }
-.sp-centerpiece .slide-bullets [class^="slide-number"]{
+.sp-centerpiece .slide-bullets [class^="slide-number"] {
     height: 1.5vh;
     width: 1.5vh;
 }
-
 /* FOOTER */
 
 footer {
@@ -542,7 +534,12 @@ footer .logo {
 }
 footer ul {
     clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     list-style-type: none;
     margin: 0;
@@ -568,24 +565,20 @@ footer ul li span {
     display: inline-block;
     margin: 12px 16px 0 0;
 }
-
 /* ADS */
 
-.ad-container{
+.ad-container {
     border-bottom: 1.5px solid #C2C2C2;
     padding: 1em 0;
 }
-
-
-@media (min-height: 400px){
+@media (min-height: 400px) {
     .title-logo h3 {
         padding-top: 3vh;
     }
 }
-
-
 @media (max-width: 499px) {
-    .sp-centerpiece .arrow-right, .sp-centerpiece .arrow-left{
+    .sp-centerpiece .arrow-right,
+    .sp-centerpiece .arrow-left {
         opacity: 0;
     }
     .title-logo h3,
@@ -593,19 +586,15 @@ footer ul li span {
         text-shadow: .085em .085em #000;
     }
     .title-logo h3 {
-        padding-top:.5em;
+        padding-top: .5em;
         font-size: 1.4em;
-    }
-    .title-logo p{
-        /*! font-size: .7em; */
-        /*! font-size: 1em; */
     }
     p.blurb {
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: .85em;
         margin-left: 1 em;
         margin-right: 1 em;
-}
+    }
     .sn-zone .headline {
         padding-top: .85em;
         padding-bottom: .45em;
@@ -615,21 +604,21 @@ footer ul li span {
     a.without_u img {
         width: 100%;
     }
-    .sn-zone > div:not(:last-of-type){
+    .sn-zone > div:not(:last-of-type) {
         border-bottom: none;
         padding-bottom: 1.5vh;
     }
-    .author{
+    .author {
+        -ms-flex-preferred-size: 34%;
         flex-basis: 34%;
     }
-    .author-block{
+    .author-block {
         border-bottom: 1.5px solid #C2C2C2;
     }
-
-    .shsMinischedrslt{
+    .shsMinischedrslt {
         padding-bottom: 1.5em;
     }
-    .item.first.single h3{
+    .item.first.single h3 {
         padding-top: .45em;
         padding-bottom: .85em;
     }
@@ -645,8 +634,7 @@ footer ul li span {
     .sec-hl-item {
         border-top: none;
     }
-   
-    .zone-c >div:last-of-type .illo{
+    .zone-c >div:last-of-type .illo {
         margin-bottom: 1em;
     }
     .spurs-stats-link {
@@ -655,23 +643,24 @@ footer ul li span {
     }
 }
 @media (min-width: 500px) {
-
-    .en-
-    .logo {
+    .en- .logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     }
-    .en-share{
+    .en-share {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
     }
     .en-share .share {
+        -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
     }
-        .title-logo h3 {
+    .title-logo h3 {
         font-size: 1.5em;
-    }
-    .title-logo p{
-        /*! font-size: .7em; */
     }
     .zone-b .without_u img {
         width: 100%;
@@ -682,9 +671,8 @@ footer ul li span {
     .zone-b .blurb {
         font-size: 1.05em;
         border-bottom: 1.5px solid #C2C2C2;
-        /*! padding-bottom:.85em; */
     }
-    .zone-c img{
+    .zone-c img {
         padding-left: .75em;
         padding-top: .5em;
     }
@@ -702,33 +690,32 @@ footer ul li span {
         padding-top: .75em;
         padding-left: .75em;
     }
-        .spurs-stats-link {
+    .spurs-stats-link {
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: 1em;
     }
 }
-
 /* Drop the author box border starting at two-column layout */
 
-@media (min-width: 500px) and (max-width: 899px){
+@media (min-width: 500px) and (max-width: 899px) {
     .author-block {
         border-bottom: 1.5px solid #C2C2C2;
     }
 }
-
-@media (max-width: 410px){
-
-    .en-share .logo{
+@media (max-width: 410px) {
+    .en-share .logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-preferred-size: 65%;
         flex-basis: 65%;
     }
-
-    .en-share .share{
+    .en-share .share {
+        -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
-        /*! align-self: center; */
     }
-
-    .share img, .share a:not(:first-of-type){
+    .share img,
+    .share a:not(:first-of-type) {
         display: none;
     }
 }
@@ -739,10 +726,14 @@ footer ul li span {
 }
 @media (min-width: 410px) and (max-width: 500px) {
     .en-share .logo {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     }
     .en-share .share {
+        -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     }
 }
@@ -751,8 +742,7 @@ footer ul li span {
     .share img {
         height: 35px;
     }
-    
-    .title-logo{
+    .title-logo {
         padding-top: 40px;
     }
 }
@@ -767,13 +757,14 @@ footer ul li span {
 }
 @media (min-width: 640px) {
     .en-share .share {
+        -ms-flex-preferred-size: 35%;
         flex-basis: 35%;
     }
-    .author{
+    .author {
+        -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     }
 }
-
 @media (min-width: 700px) {
     .share button,
     .share img {
@@ -782,6 +773,7 @@ footer ul li span {
 }
 @media (min-width: 800px) {
     .en-share .share {
+        -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     }
     .title-logo {
@@ -794,75 +786,66 @@ footer ul li span {
         max-height: 7em;
         padding-right: 1vw;
     }
-    .author{
+    .author {
+        -ms-flex-preferred-size: 17%;
         flex-basis: 17%;
     }
 }
 /* Make 'more from the writers' match spacing on other collections */
+
 @media (max-width: 899px) {
     .author-block h3 {
-        margin-top:.15em;
+        margin-top: .15em;
     }
-        .zone-b .blurb {
-            padding-bottom: .5em;
+    .zone-b .blurb {
+        padding-bottom: .5em;
     }
 }
-
-@media (min-width: 900px){
-
-/*     .spurs-stats-link{
-        display: none;
-    }
-     */
-/*     Lead story in zone b - dump the inlining of photos with
+@media (min-width: 900px) {
+    /*     Lead story in zone b - dump the inlining of photos with
     text for a more presentational look */
     
-    .zone-b > div:first-of-type .headline.display-below{
-/*         display: block;
-        float: none;
-        width: 100%; */
+    .zone-b > div:first-of-type .headline.display-below {
         padding-top: .85em;
         padding-bottom: .85em;
     }
-    
-    .zone-b > div:first-of-type img{
+    .zone-b > div:first-of-type img {
         margin-top: 1em;
     }
-    
     /*     Switch zone b lead story to the same presentation as other zone b stories */
     
-    .zone-b > div:first-of-type .single-img-wrapper{
+    .zone-b > div:first-of-type .single-img-wrapper {
         float: right;
         width: 50%;
     }
-    
-    .zone-b > div:first-of-type .headline.display-above{
+    .zone-b > div:first-of-type .headline.display-above {
         display: inline;
         padding-top: .5em;
     }
-    
-    .zone-b > div:first-of-type .headline.display-below{
+    .zone-b > div:first-of-type .headline.display-below {
         display: none;
     }
-    
-    .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
+    .zone-b > div:first-of-type .display-above,
+    .zone-b > div:first-of-type .detail {
         width: 45%;
         float: left;
     }
-    
-    .zone-b li h4{
+    .zone-b li h4 {
         width: 45%;
         float: left;
     }
+    /*     Remove bottom border on zone C  */
     
+    .zone-c > div:last-of-type .illo {
+        border-bottom: 0;
+    }
 }
-
-
-            @media(min-width:950px){
-                .author{
-                flex-basis: 15%;
-                }
-            }
+@media(min-width:950px) {
+    .author {
+        -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    }
+}
 @media (min-width: 1000px) {
     .title-logo h3 {
         font-size: 4.75em;
@@ -880,107 +863,109 @@ footer ul li span {
 }
 @media (max-width: 1023px) {
     .zone-b {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
     }
     .zone-c {
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
     }
     .zone-a {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
     }
 }
-
-
 /* TWO-COLUMN LAYOUT, INTENDED FOR TABLETS + SMALL DESKTOPS */
 
 @media(min-width: 900px) and (max-width: 1279px) {
     section {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
         flex-flow: row wrap;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
         width: 100%;
     }
     .zone-a {
-/*         display: flex; */
+        -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
+        -ms-flex-pack: distribute;
         justify-content: space-around;
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
         margin-right: auto;
-/*! justify-self: flex-end; */
-margin-left: 2.25%;
-/* Turn off Zone A on tablets */
-         display:none;
-    }
-    
-    .zone-a .item img{
-/*         width: 60%; */
+        margin-left: 2.25%;
+        display: none;
     }
     .zone-a > div:nth-of-type(1) {
+        -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
         order: 3;
     }
     .zone-a > div:first-child {
         display: none;
     }
     .zone-a > div:nth-of-type(2) {
+        -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
         order: 4;
         display: none;
     }
-    .zone-a > div:nth-of-type(3) {
-        /*! order: 1; */
-        /*! flex-basis: 40%; */
-    }
-    .zone-a > div:nth-of-type(4) {
-        /*! order: 2; */
-        /*! flex-basis: 40%; */
-    }
     .zone-b {
+        -ms-flex-preferred-size: 60%;
         flex-basis: 60%;
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
         order: 1;
         margin-right: 1.25em;
-        /*! margin-left: 1.5em; */
-        /*! margin-right: 2em; */
     }
-    
-    .zone-b .without_u img{
+    .zone-b .without_u img {
         width: 33%;
     }
+    /*     Stlying for the lead image in zone B */
     
-/*     Stlying for the lead image in zone B */
-    
-    .zone-b > div:first-of-type img{
-        /*! width: 90%; */
+    .zone-b > div:first-of-type img {
         display: block;
         float: none;
     }
-    
     .zone-c {
+        -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+        -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
         order: 2;
         border-left: 1.5px solid #C2C2C2;
         padding-left: 1.5em;
         margin-bottom: 2em;
     }
+    /*     Float images to the right in zone b, with headline and blurb floated left beside them */
     
-
-    
-/*     Float images to the right in zone b, with headline and blurb floated left beside them */
-    
-    .zone-b .sec-hl-item{
+    .zone-b .sec-hl-item {
         display: block;
         overflow: auto;
         border-bottom: 1.5px solid #C2C2C2;
         padding-bottom: 1em;
         padding-top: 1em;
     }
-    
-    .zone-b .headline, .zone-b .blurb, .zone-b .header{
+    .zone-b .headline,
+    .zone-b .blurb,
+    .zone-b .header {
         width: 63%;
     }
-    
-    .zone-b .headline{
+    .zone-b .headline {
         display: inline;
-        float: left;
         padding-bottom: .85em;
         font-size: 1.1em;
     }
@@ -991,42 +976,26 @@ margin-left: 2.25%;
     .zone-c .detail {
         font-size: .9em;
     }
-    
-    .zone-b .blurb{
+    .zone-b .blurb {
         border: none;
     }
-    
-    .zone-b .illo{
+    .zone-b .illo {
         overflow-x: hidden;
     }
-
-    /*     Remove bottom border on zone C  */
-    .zone-c > div:last-of-type .illo{
-        border-bottom: 0;
-    }
-    
-    
-/*     .zone-b .without_u, .zone-b .without_u img{
-        display: block;
-    } */
-
 }
-
 /* These margins break the two-column layout below 980px, so we wait to throw them on until that point */
 
-@media (min-width: 980px){
-    .zone-b{
+@media (min-width: 980px) {
+    .zone-b {
         margin-left: 1.2em;
     }
-
-    .zone-c{
+    .zone-c {
         margin-right: 1.5em;
     }
 }
-
-
 @media(min-width: 1024px) {
     .spurs-nation-header .en-share .logo {
+        -ms-flex-preferred-size: 35%;
         flex-basis: 35%;
     }
     .spurs-stats .shsTable td:nth-of-type(3n) {
@@ -1036,57 +1005,61 @@ margin-left: 2.25%;
         padding: .25em;
     }
     .author {
+        -ms-flex-preferred-size: 15%;
         flex-basis: 15%;
         margin-bottom: .5em;
     }
     .author-container figcaption {
-    display: block;
+        display: block;
         text-align: center;
         font-size: 80%;
-    padding-top: .5em;
-}
-    .title-logo{
+        padding-top: .5em;
+    }
+    .title-logo {
         padding-top: 30px;
     }
 }
-
-@media (max-width: 1279px){
-    .spurs-stats{
+@media (max-width: 1279px) {
+    .spurs-stats {
         display: none;
     }
 }
-
 /* THREE-COLUMN LAYOUT, INTENDED FOR LARGE SCREENS */
 
 @media(min-width: 1280px) {
     .en-share .logo {
+        -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
     }
-    
-    .title-logo{
+    .title-logo {
         padding-top: 45px;
     }
     section {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
     }
     .zone-a {
+        -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
         border-right: 1px solid #C2C2C2;
         margin-bottom: 3vh;
     }
-    
     /*     Remove bottom border on zone A  */
-    .zone-a > div:last-of-type .illo{
+    
+    .zone-a > div:last-of-type .illo {
         border-bottom: 0;
     }
-    
-    .zone-a > div:first-of-type{
+    .zone-a > div:first-of-type {
         margin-top: 1em;
     }
-    .zone-a .byline, .detail{
+    .zone-a .byline,
+    .detail {
         font-size: .9em;
     }
     .zone-b {
+        -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     }
     .zone-b > div,
@@ -1095,7 +1068,7 @@ margin-left: 2.25%;
         width: 90%;
         margin: 0 auto;
     }
-    .zone-b .blurb{
+    .zone-b .blurb {
         margin-top: 1em;
     }
     .zone-b .blurb {
@@ -1104,80 +1077,70 @@ margin-left: 2.25%;
     .zone-b > div:not(:first-of-type) .headline {
         font-size: 1.15em;
     }
-
-    .author-block{
+    .author-block {
         border-bottom: none;
     }
-    
-    
-        .zone-b > div:first-of-type .single-img-wrapper{
+    .zone-b > div:first-of-type .single-img-wrapper {
         float: left;
     }
-    
-    
-    .zone-b > div:first-of-type .display-above, .zone-b > div:first-of-type .detail{
+    .zone-b > div:first-of-type .display-above,
+    .zone-b > div:first-of-type .detail {
         float: right;
     }
-    
-    .zone-b li h4{
+    .zone-b li h4 {
         float: right;
     }
-
+    /*     Float images in zone b left, with headline and blurbs floated right */
     
-/*     Float images in zone b left, with headline and blurbs floated right */
-    
-    .zone-b .sec-hl-item{
+    .zone-b .sec-hl-item {
         display: block;
         overflow: auto;
     }
-    
-    .zone-b .headline, .zone-b .blurb, .zone-b .header{
+    .zone-b .headline,
+    .zone-b .blurb,
+    .zone-b .header {
         width: 50%;
     }
-    
-    .zone-b .headline, .zone-b .blurb{
+    .zone-b .headline,
+    .zone-b .blurb {
         display: inline;
-        float: right;
     }
-    
-    .zone-b .blurb{
+    .zone-b .blurb {
         border: none;
     }
-    
-    .zone-b .headline{
+    .zone-b .headline {
         margin-top: 0;
         padding-top: 0;
     }
-    
     .zone-b .without_u img {
-        display:inline;
-        float:left;
+        display: inline;
         padding-left: 0;
-        width: 45%;
     }
-    .zone-b .sec-hl-item{
+    .zone-b .sec-hl-item {
         overflow: auto;
         padding-bottom: 1em;
         border-bottom: 1px solid #C2C2C2;
         margin-bottom: 1em;
     }
-    .zone-a .byline{
+    .zone-a .byline {
         padding-bottom: .5em;
     }
     .zone-c {
+        -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
         border-left: 1px solid #C2C2C2;
-/*         creates space between the border and bottomo of page */
+        /*         creates space between the border and bottomo of page */
+        
         margin-bottom: 3vh;
     }
-    .zone-c img{
+    .zone-c img {
         padding-top: 1em;
         padding-left: 1em;
         padding-bottom: 1em;
     }
     .zone-c .headline {
         font-size: 1.1em;
- }
+    }
     .zone-c .byline {
         font-size: .9em;
         padding-bottom: .5em;
@@ -1186,17 +1149,10 @@ margin-left: 2.25%;
         font-size: .9em;
     }
     .author {
+        -ms-flex-preferred-size: 18%;
         flex-basis: 18%
-    } 
-}
-/* Changes the EN logo width on very large screens */
-@media (min-width: 1500px) {
-    .title-logo .logo img {
-        /*! width: 64%; */
-        /*! width: 92%; */
     }
 }
-
 @media (min-width: 48.000rem) {
     footer {
         padding: 30px 25px;
