@@ -14,11 +14,11 @@ const createZones = (document: Document) => {
 
     Array.from(divs).forEach((div, index) => {
         const node = div.parentElement.removeChild(div);
-        if (index < 5) {
+        if (index < 6) {
             zones[0].appendChild(node);
-        } else if (index >= 5 && index < 8) {
+        } else if (index >= 6 && index < 9) {
             zones[1].appendChild(node);
-        } else if (index >= 8) {
+        } else if (index >= 9) {
             zones[2].appendChild(node);
         }
     });

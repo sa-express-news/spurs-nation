@@ -16,11 +16,11 @@ const createZones = (document: Document) => {
 
     Array.from(divs).forEach((div, index) => {
         const node = div.parentElement.removeChild(div);
-        if (index < 5) {
+        if (index < 6) {
             zones[0].appendChild(node);
-        } else if (index >= 5 && index < 8) {
+        } else if (index >= 6 && index < 9) {
             zones[1].appendChild(node);
-        } else if (index >= 8) {
+        } else if (index >= 9) {
             zones[2].appendChild(node);
         }
     });
@@ -73,11 +73,11 @@ const addCollectionHeadings = (document: Document, data: { id: number, heading: 
 }
 
 const headingsToAdd = [
-    { id: 86752, heading: `Writers' Roundtable` },
+    { id: 87097, heading: `Writers' Roundtable` },
     { id: 87017, heading: `Photos` },
-    { id: 86829, heading: `Spurs Notebook` },
-    { id: 86830, heading: `Off-Topic Conversation` },
-    { id: 86831, heading: `Our Take` },
+    { id: 87164, heading: `Spurs Notebook` },
+    { id: 87161, heading: `Off-Topic Conversation` },
+    { id: 87094, heading: `Our Take` },
     { id: 87081, heading: 'Spurs by the Numbers' }
 ];
 
