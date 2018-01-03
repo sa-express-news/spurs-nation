@@ -39,12 +39,73 @@ Again, I never set up a good build process here. I copied each of the scripts in
 
 ## Making Updates ##
 
-### Updating the Section ###
+### Updating the section ###
 
 Simply open the Spurs Nation site section in the WCM, find whatever freeform you need to change, and replace the old code inside with your new stuff.
 
-### Updating the Article Template ###
+### Updating the article template ###
 
 Head to the EN side of the WCM and search `type:articleDesign`. That will list all the article templates - Spurs Nation should be near the top.
 
 The article template is similar to a section in that you can open the design tab and add/tweak freeforms to your heart's content.
+
+### Updating the number of zones on the page ###
+
+Unfortunately, because our zones are a hack created on the fly via JavaScript, merely adding another freeform/collection/etc. to the page will probably make everything look terrible. Luckily, it's pretty easy to change the code. Open up `js/spurs-nation.js` and look for the following segment:
+
+```javascript
+var createZones = function createZones(document) {
+    var mainSection = document.getElementsByTagName('section')[0];
+    var divs = mainSection.children;
+    var zones = [createZone(document, 'zone-a'), createZone(document, 'zone-b'), createZone(document, 'zone-c')];
+    Array.from(divs).forEach(function (div, index) {
+        var node = div.parentElement.removeChild(div);
+        if (index < 5) {
+            zones[0].appendChild(node);
+        } else if (index >= 5 && index < 8) {
+            zones[1].appendChild(node);
+        } else if (index >= 8) {
+            zones[2].appendChild(node);
+        }
+    });
+    zones.forEach(function (zone) {
+        mainSection.appendChild(zone);
+    });
+};
+```
+
+This is a function defined like a variable. It works the same way as a function, which is why the next line calls `createZones`. This may look like a lot, but check out the `if/else if` block:
+
+```javascript
+        if (index < 5) {
+            zones[0].appendChild(node);
+        } else if (index >= 5 && index < 8) {
+            zones[1].appendChild(node);
+        } else if (index >= 8) {
+            zones[2].appendChild(node);
+        }
+```
+
+This code essentially says "For every number below 5 (aka 0-4), add things into the first zone. Then, from 5 to 8, add things into the second zone. Add everything else into the last zone."
+
+This is another way of saying:
+
+- There should be five items in the first zone (0-4)
+- There should be four items in the second zone (5-8)
+- There should be however many items you want in the third zone (8-infinity)
+
+That means we just need to tweak this small code piece to change the number of sections in a given zone. If we wanted six items in the first zone instead of five, we would do this:
+
+```javascript
+        if (index < 6) { // This will take 0-5, which is 6
+            zones[0].appendChild(node);
+        } else if (index >= 6 && index < 9) { // Bump both of these numbers up, since we want same number of zones here
+            zones[1].appendChild(node);
+        } else if (index >= 9) { // Bump this number up, because 9 is the new threshold instead of 8
+            zones[2].appendChild(node);
+        }
+```
+
+Etc. etc. Now we need to take our new JavaScript and replace the old one. Use the query `site:premiummysa AND id:84437` to open the JavaScript freeform in the WCM. Delete everything between the `<script>` tags and replace it with the entire `spurs-nation.js` file you just modified, then republish the freeform.
+
+Finally, open the Spurs Nation site section with the query `site:premiummysa AND id:18493`. Make the modification you accounted for by adding/removing the item(s) in whatever zone you wanted. Republish the site section and you should be good! ...After the WCM cache refreshes, which can take 20 minutes or so.
