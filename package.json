@@ -4,7 +4,8 @@
   "description": "Code for the Spurs Nation page at expressnews.com/spurs-nation",
   "main": "ts/spurs-nation.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "webpack -p --config webpack.config.js",
+    "build-article": "tsc"
   },
   "repository": "https://github.com/sa-express-news/spurs-nation.git",
   "author": "Kia Farhang <kfarhang0@gmail.com>",
@@ -13,6 +14,7 @@
   "devDependencies": {
     "ts-loader": "^4.0.1",
     "typescript": "^2.7.2",
-    "webpack": "^4.1.1"
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
   }
 }

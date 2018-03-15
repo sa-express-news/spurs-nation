@@ -15,7 +15,7 @@ module.exports = {
         extensions: ['.ts', '.js']
     },
     output: {
-        filename: 'bundle.js',
+        filename: 'spurs-nation.js',
         path: path.resolve(__dirname, 'dist')
     }
 };
