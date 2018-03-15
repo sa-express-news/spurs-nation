@@ -19,8 +19,17 @@ const createHeading = (document: Document, headingText: string): HTMLHeadingElem
     return heading;
 }
 
+const headingsToAdd = [
+    { id: 87097, heading: `Writers' Roundtable` },
+    { id: 87017, heading: `Photos` },
+    { id: 87164, heading: `Spurs Notebook` },
+    { id: 87161, heading: `Off-Topic Conversation` },
+    { id: 87094, heading: `Our Take` },
+    { id: 87081, heading: 'Spurs by the Numbers' }
+];
 
-const addCollectionHeadings = (document: Document, data: { id: number, heading: string }[]): void => {
+
+export const addCollectionHeadings = (document: Document, data: { id: number, heading: string }[] = headingsToAdd): void => {
     const collections = Array.from(document.getElementsByClassName('hide-rss-link'));
 
     data.forEach((data) => {
@@ -32,14 +41,3 @@ const addCollectionHeadings = (document: Document, data: { id: number, heading: 
         });
     });
 }
-
-const headingsToAdd = [
-    { id: 87097, heading: `Writers' Roundtable` },
-    { id: 87017, heading: `Photos` },
-    { id: 87164, heading: `Spurs Notebook` },
-    { id: 87161, heading: `Off-Topic Conversation` },
-    { id: 87094, heading: `Our Take` },
-    { id: 87081, heading: 'Spurs by the Numbers' }
-];
-
-addCollectionHeadings(document, headingsToAdd);

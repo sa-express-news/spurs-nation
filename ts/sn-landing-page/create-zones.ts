@@ -5,8 +5,7 @@ const createZone = (document: Document, className: string): HTMLDivElement => {
     return zone;
 }
 
-
-const createZones = (document: Document) => {
+export const createZones = (document: Document) => {
     const mainSection = document.getElementsByTagName('section')[0];
     const divs = mainSection.children;
 

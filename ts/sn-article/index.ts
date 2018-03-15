@@ -7,7 +7,6 @@ const setElementWidthAndMargin = (el: HTMLElement, width: string, margin: string
     changeElementStyle(el, 'margin', margin);
 }
 
-
 const resizeVerticalArticlePhoto = (document: Document): void => {
     //If the lead image has the portrait class...
 
