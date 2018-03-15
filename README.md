@@ -35,7 +35,7 @@ There are a few other scripts in that folder:
 - `trim-stats-table-heading.ts` just takes the stats.com table we use and changes the heading from "Spurs: Stats" to "Stats."
 - `resize-vertical-article-photos.ts` lives in the Spurs Nation article template. It shrinks vertical lead photos, because the WCM currently pulls in small versions of them and stretches them and it looks horrible.
 
-Again, I never set up a good build process here. I copied each of the scripts into `ts/spurs-nation.ts` (along with the actual calls to the functions to run them), then passed that Typescript code through the [Typescript Playground](https://www.typescriptlang.org/play/) to convert it to JS. I then passed the JS through [the Babel REPL](https://babeljs.io/repl/), though it's basic ES5 and you should be fine support-wise without that step.
+There are two processes to build the JS files. The NPM `build` script bundles all of the Spurs Nation code into a `spurs-nation.js` file in a newly created `dist/` directory. The NPM `build-article` command creates two folders in the `dist/` directory; grab the `sn-article/index.js` file to update the article JS in the article design template in the WCM.
 
 ## Making Updates ##
 
@@ -47,19 +47,21 @@ Simply open the Spurs Nation site section in the WCM, find whatever freeform you
 
 Head to the EN side of the WCM and search `type:articleDesign`. That will list all the article templates - Spurs Nation should be near the top.
 
-The article template is similar to a section in that you can open the design tab and add/tweak freeforms to your heart's content.
+The article template is similar to a section in that you can open the design tab and add/tweak freeforms to your heart's content. Note that that the bottom of the page you'll find a freeform with the contents of the article page JS; use the NPM `build-article` command described in the "JavaScript" section above to build this file.
 
 ### Updating the number of zones on the page ###
 
-Unfortunately, because our zones are a hack created on the fly via JavaScript, merely adding another freeform/collection/etc. to the page will probably make everything look terrible. Luckily, it's pretty easy to change the code. Open up `js/spurs-nation.js` and look for the following segment:
+Unfortunately, because our zones are a hack created on the fly via JavaScript, merely adding another freeform/collection/etc. to the page will probably make everything look terrible. Luckily, it's pretty easy to change the code. Open up `ts/sn-landing-page/create-zones.ts` and look for the following segment:
 
-```javascript
-var createZones = function createZones(document) {
-    var mainSection = document.getElementsByTagName('section')[0];
-    var divs = mainSection.children;
-    var zones = [createZone(document, 'zone-a'), createZone(document, 'zone-b'), createZone(document, 'zone-c')];
-    Array.from(divs).forEach(function (div, index) {
-        var node = div.parentElement.removeChild(div);
+```typescript
+export const createZones = (document: Document) => {
+    const mainSection = document.getElementsByTagName('section')[0];
+    const divs = mainSection.children;
+
+    const zones: HTMLDivElement[] = [createZone(document, 'zone-a'), createZone(document, 'zone-b'), createZone(document, 'zone-c')];
+
+    Array.from(divs).forEach((div, index) => {
+        const node = div.parentElement.removeChild(div);
         if (index < 5) {
             zones[0].appendChild(node);
         } else if (index >= 5 && index < 8) {
@@ -68,15 +70,17 @@ var createZones = function createZones(document) {
             zones[2].appendChild(node);
         }
     });
-    zones.forEach(function (zone) {
+
+    zones.forEach((zone: HTMLDivElement) => {
         mainSection.appendChild(zone);
     });
-};
+
+}
 ```
 
-This is a function defined like a variable. It works the same way as a function, which is why the next line calls `createZones`. This may look like a lot, but check out the `if/else if` block:
+This is a function defined like a variable. It may look like a lot, but check out the `if/else if` block:
 
-```javascript
+```typescript
         if (index < 5) {
             zones[0].appendChild(node);
         } else if (index >= 5 && index < 8) {
@@ -96,7 +100,7 @@ This is another way of saying:
 
 That means we just need to tweak this small code piece to change the number of sections in a given zone. If we wanted six items in the first zone instead of five, we would do this:
 
-```javascript
+```typescript
         if (index < 6) { // This will take 0-5, which is 6
             zones[0].appendChild(node);
         } else if (index >= 6 && index < 9) { // Bump both of these numbers up, since we want same number of zones here
@@ -106,6 +110,24 @@ That means we just need to tweak this small code piece to change the number of s
         }
 ```
 
-Etc. etc. Now we need to take our new JavaScript and replace the old one. Use the query `site:premiummysa AND id:84437` to open the JavaScript freeform in the WCM. Delete everything between the `<script>` tags and replace it with the entire `spurs-nation.js` file you just modified, then republish the freeform.
+Etc. etc. Now we need to rebuild the landing page code and replace it in the WCM. Open up a terminal at the root of this project and install its dependencies if you haven't yet, using [Yarn](https://yarnpkg.com/) or [NPM](https://www.npmjs.com/).
+
+`yarn` or `npm install`
+
+Run the NPM `build` command to recompile all the landing page TypeScript into one file.
+
+`yarn build` or `npm run build`
+
+Grab the new file at `dist/spurs-nation.js` and open the WCM. Use the query `site:premiummysa AND id:84437`to find the freeform containing the page code. Delete everything between the `<script>` tags and replace it with the contents of the JS file we just created, then republish the freeform.
 
 Finally, open the Spurs Nation site section with the query `site:premiummysa AND id:18493`. Make the modification you accounted for by adding/removing the item(s) in whatever zone you wanted. Republish the site section and you should be good! ...After the WCM cache refreshes, which can take 20 minutes or so.
+
+### Other Changes ###
+
+Other changes to the page should follow a similar workflow: work in the repo, compile TypeScript into JavaScript (if necessary), replace the contents of whatever freeform you need to. Be sure to push your changes back up to this repository when you're done:
+
+```bash
+git add .
+git commit -m "Description of what you did"
+git push origin master
+```
